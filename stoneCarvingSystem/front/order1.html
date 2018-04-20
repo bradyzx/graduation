@@ -1,0 +1,559 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+ 
+<link  href="Css/layout.css" rel="stylesheet" type="text/css" />
+<link href="Css/cb.css" rel="stylesheet" type="text/css"   />
+<link  href="Css/n.css" rel="stylesheet" type="text/css" />
+<style>
+.biankuangs{ border:solid #A6D2FF 1px; border-top:0px;   }
+#xueke,#item_text2,#item_text1,#itemtypes2,#item_text3{ /**/display:none;}
+.pagelink{cursor: pointer;}
+</style> 
+</head>
+
+<body>
+<table width="99%" height="25" border="0" align="center" cellpadding="0" cellspacing="0" style="margin-bottom:4px;">
+      <tr>
+        <td width="17" background="Images/bj4.gif"><img src="Picture/r.gif" width="16" height="16" /></td>
+        <td width="466" background="Images/bj4.gif">	
+		</td>
+        <td width="162" align="center" background="Images/bj4.gif">
+		
+				<a href="apply1.php"></a>
+				</td>           
+      </tr>
+    </table>
+<table width="99%" border="0" align="center" cellpadding="0" cellspacing="0">
+          <tr>
+            <td width="1%" align="left" background="Images/b2.jpg"><img src="Picture/b1.jpg" width="10" height="26" /></td>
+            <td width="68%" background="Images/b2.jpg"><table width="124" border="0" align="left" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td width="20" align="left"><img src="Picture/tz.gif" width="10" height="16" /></td>
+                  <td width="104" align="left" class="biao">订单搜索</td>
+                </tr>
+            </table></td>
+            <td width="31%" align="right" background="Images/b2.jpg"><img src="Picture/b3.jpg" width="9" height="26" /></td>
+          </tr>
+</table>
+<table width="99%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#AEDEF4">
+    <tr>
+      <td align="center" bgcolor="#E2F7FE"><form id="form1" name="form1" method="get" action="">
+    	  <table width="50%" border="0" cellspacing="1" cellpadding="3">
+        <tr>
+          <td width="10%" height="25" align="center">用户名：</td>
+          <td width="14%" align="left"><label>
+            <input name="itemname" type="text" id="itemname" size="20" />
+          </label></td>
+          <td width="8%"><input type="button" name="button" value="搜索" class="searchBtn"/></td>
+        </tr>
+      </table>
+	        </form></td>
+    </tr>
+</table>
+
+<table width="50%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td height="5"></td>
+  </tr>
+</table>
+  <table width="99%" border="0" align="center" cellpadding="0" cellspacing="0">
+          <tr>
+            <td width="1%" align="left" background="Images/b2.jpg"><img src="Picture/b1.jpg" width="10" height="26" /></td>
+            <td width="68%" background="Images/b2.jpg"><table width="124" border="0" align="left" cellpadding="0" cellspacing="0">
+                <tr style="position: relative;">
+                  <td width="20" align="left"><img src="Picture/tz.gif" width="10" height="16" /></td>
+                  <td width="104" align="left" class="biao" >订单信息列表<span id="prolist" style="position: absolute;top: 92px;left: 140px;height: 22px;cursor: pointer;">显示所有订单信息</span></td>
+                </tr>
+            </table></td>
+            <td width="31%" align="right" background="Images/b2.jpg"><img src="Picture/b3.jpg" width="9" height="26" /></td>
+          </tr>
+</table>
+  <table id="table1" width="99%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#AEDEF4" style="border:1px solid #AEDEF4">
+    <tr id="tt">
+      <td width="5%" height="25" align="center" bgcolor="#EFFBFE">订单编号</td>
+      <td align="center" bgcolor="#EFFBFE">用户名</td>
+      <td align="center" bgcolor="#EFFBFE">商品名</td>
+      <td align="center" bgcolor="#EFFBFE">下单数量</td>
+      <td align="center" bgcolor="#EFFBFE">下单时间</td>
+      <td align="center" bgcolor="#EFFBFE">订单状态</td>
+      <td align="center" bgcolor="#EFFBFE">收货地址</td>
+      <td align="center" bgcolor="#EFFBFE">备注</td>
+      <td align="center" bgcolor="#EFFBFE">操作</td>
+    </tr>
+    <tr >
+    	<td colspan="9" height="30">点击显示所有用户信息</td>
+    </tr>
+    <!--显示             数据库          数据的行列-->
+		<!--<tr onmouseout="this.style.backgroundColor='#ffffff'" bgcolor="#ffffff"  onmouseover="this.style.backgroundColor='#E6F2FF'">
+	      <td height="25" align="center"  >0000000000000000000000001</td>
+	      <td align="center" class="t5"   ><div align="left"><strong>small</strong></div></td>
+	      <td align="center">青田石雕</td>
+	      <td align="center">1111</td>
+	      <td align="center">1000</td>
+	      <td align="center">这是一个模板石雕</td>
+	      <td align="center">y</td>
+	      <td align="center">100</td>
+	   </tr>-->
+	<!--分页-->
+	<!--<tr rowspan='2' height="25">
+      <td colspan="10" bgcolor="#FFFFFF" align="center">&nbsp;
+	  	<span class='pagelink'><</span> <span class='pagelink'><<</span> <a class='pagelink' href='#?NowPage=1'><font color=green>[1]</font></a>  <span class='pagelink'>>></span> <span class='pagelink'>></span> 转到第&nbsp;<input id='JumpSelect' type='text' size='2' value='1'onBlur="javascript:if(isNaN(parseInt(this.value)) || parseInt(this.value) > 1){alert('您输入的数字只能在 1 ～ 1之间，请重新输入'); return false;}location.href='#" title='鼠标外部单击，文章转向'> 页	  
+      </td>
+      <td bgcolor="#FFFFFF"></td>
+    </tr>-->
+</table>
+
+	 </form>
+</div>
+
+
+
+
+
+</body>
+
+<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script type="text/javascript">
+	//显示商品列表
+	//    总页数          一页的数据       当前页
+	var pages=0,limit=0,page=0;
+		function fn () {
+			$.ajax({
+				type:"post",
+				url:"http://localhost:3000/orderlist/list",
+				async:true,
+				data:{
+					orderstate:"未审核"
+				}
+			}).then(function (res) {
+				pages=res.pages;
+				limit=res.limit;
+				page=res.page;
+				console.log('总页数：'+pages+'一页的数据行：'+limit+'当前页：'+page);
+				let result = res.rows;
+				let htmltd='';
+				for (var i in result){
+					htmltd+=`
+							<tr onmouseout="this.style.backgroundColor='#ffffff'" bgcolor="#ffffff"  onmouseover="this.style.backgroundColor='#E6F2FF'">
+							  <td height="25" align="center">${result[i]._id}</td>
+						      <td align="center" class="t5">${result[i].username}</td>
+						      <td align="center">${result[i].proname}</td>
+						      <td align="center">${result[i].ordernum}</td>
+						      <td align="center">${result[i].ordertime}</td>
+						      <td align="center">${result[i].orderstate}</td>
+						      <td align="center">${result[i].address}</td>
+						      <td align="center">${result[i].beizhu}</td>
+						      <td align="center"><a href='javascript:;' class="updateBtn" >可发货</a> </td>
+						    </tr>`;
+						      
+				}
+				htmltd+=`
+						<tr rowspan='2' height="25">
+					      <td colspan="10" bgcolor="#FFFFFF" align="center">&nbsp;
+						  	<span class='pagelink shouye'>首页&nbsp;&nbsp;</span> 
+						  	<span class='pagelink last'>上一页</span> 
+						  	  	&nbsp;&nbsp;<font color=green>${page}/${pages}</font>  &nbsp;&nbsp; 
+						  	<span class='pagelink next'>下一页&nbsp;&nbsp;</span> 
+						  	<span class='pagelink weiye'>尾页</span> 
+					      </td>
+					      <td bgcolor="#FFFFFF"></td>
+					    </tr>
+						`;
+				$('#table1').append(htmltd);
+				//尾页点击事件
+				$('.weiye').on('click',function () {
+					weiyeBtn();
+				});
+				//首页点击事件
+				$('.shouye').on('click',function () {
+					shouyeBtn();
+				});
+				//上一页点击事件
+				$('.last').on('click',function () {
+					lastBtn();
+				});
+				//下一页点击事件
+				$('.next').on('click',function () {
+					nextBtn();
+				});
+				//修改按钮
+				$(".updateBtn").on("click",function () {
+					var that = $(this);
+					updatebtn(that);
+				});
+				//下架按钮
+				$(".deleteBtn").on("click",function () {
+						if(confirm('确定下架商品')){
+							var that = $(this);
+							deletebtn(that);
+						}
+				});
+			});
+		}
+		$('#prolist').on('click',function(){
+			$('#table1 tr').not('#tt').remove();
+			fn();
+		});
+		$('#prolist').click();
+		
+	//搜索
+		$('.searchBtn').on('click',function () {
+			$.ajax({
+				type:"post",
+				url:"http://localhost:3000/orderlist/list",
+				async:true,
+				data:{
+					username:$('#itemname').val(),
+					orderstate:"未审核"
+				}
+			}).then(function (res) {
+				console.log(1)
+				pages=res.pages;
+				limit=res.limit;
+				page=res.page;
+				var result = res.rows;
+				var searchtd='';
+				for (var i in result){
+					searchtd+=`
+							<tr onmouseout="this.style.backgroundColor='#ffffff'" bgcolor="#ffffff"  onmouseover="this.style.backgroundColor='#E6F2FF'">
+							  <td height="25" align="center">${result[i]._id}</td>
+						      <td align="center" class="t5">${result[i].username}</td>
+						      <td align="center">${result[i].proname}</td>
+						      <td align="center">${result[i].ordernum}</td>
+						      <td align="center">${result[i].ordertime}</td>
+						      <td align="center">${result[i].orderstate}</td>
+						      <td align="center">${result[i].address}</td>
+						      <td align="center">${result[i].beizhu}</td>
+						      <td align="center"><a href='javascript:;' class="updateBtn" >可发货</a> </td>
+						    </tr>
+						    `;
+						      
+				}
+				
+				searchtd+=`
+						<tr rowspan='2' height="25">
+					      <td colspan="10" bgcolor="#FFFFFF" align="center">&nbsp;
+						  	<span class='pagelink shouye'>首页&nbsp;&nbsp;</span> 
+						  	<span class='pagelink last'>上一页</span> 
+						  	  	&nbsp;&nbsp;<font color=green>${page}/${pages}</font>  &nbsp;&nbsp; 
+						  	<span class='pagelink next'>下一页&nbsp;&nbsp;</span> 
+						  	<span class='pagelink weiye'>尾页</span> 
+					      </td>
+					      <td bgcolor="#FFFFFF"></td>
+					    </tr>
+						`;
+				$('#table1 tr').not('#tt').remove();
+				$('#table1').append(searchtd);
+				
+				//尾页点击事件
+				$('.weiye').on('click',function () {
+					weiyeBtn();
+				});
+				//首页点击事件
+				$('.shouye').on('click',function () {
+					shouyeBtn();
+				});
+				//上一页点击事件
+				$('.last').on('click',function () {
+					lastBtn();
+				});
+				//下一页点击事件
+				$('.next').on('click',function () {
+					nextBtn();
+				});
+				//修改按钮
+				$(".updateBtn").on("click",function () {
+					var that = $(this);
+					updatebtn(that);
+				});
+			});
+		});
+	
+	//尾页按钮
+	function weiyeBtn () {
+		$('#table1 tr').not('#tt').remove();
+			$.ajax({
+				type:"post",
+				url:"http://localhost:3000/orderlist/list",
+				async:true,
+				data:{
+					page:pages,
+					orderstate:"未审核"
+				}
+			}).then(function (res) {
+				let result = res.rows;
+				console.log(result[0]._id);
+				var htmltd="";
+				for (var i in result){
+					htmltd+=`
+							<tr onmouseout="this.style.backgroundColor='#ffffff'" bgcolor="#ffffff"  onmouseover="this.style.backgroundColor='#E6F2FF'">
+							  <td height="25" align="center">${result[i]._id}</td>
+						      <td align="center" class="t5">${result[i].username}</td>
+						      <td align="center">${result[i].proname}</td>
+						      <td align="center">${result[i].ordernum}</td>
+						      <td align="center">${result[i].ordertime}</td>
+						      <td align="center">${result[i].orderstate}</td>
+						      <td align="center">${result[i].address}</td>
+						      <td align="center">${result[i].beizhu}</td>
+						      <td align="center"><a href='javascript:;' class="updateBtn" >可发货</a> </td>
+						    </tr>`;
+						      
+				}
+				htmltd+=`
+				<tr rowspan='2' height="25">
+			      <td colspan="10" bgcolor="#FFFFFF" align="center">&nbsp;
+				  	<span class='pagelink shouye'>首页&nbsp;&nbsp;</span> 
+				  	<span class='pagelink last'>上一页</span> 
+				  	  	&nbsp;&nbsp;<font color=green>${pages}/${pages}</font>  &nbsp;&nbsp; 
+				  	<span class='pagelink next'>下一页&nbsp;&nbsp;</span> 
+				  	<span class='pagelink weiye'>尾页</span> 
+			      </td>
+			      <td bgcolor="#FFFFFF"></td>
+			    </tr>
+				`;
+				$('#table1').append(htmltd);
+				//首页点击事件
+				$('.shouye').on('click',function () {
+					shouyeBtn();
+				});
+				//上一页点击事件
+				$('.last').on('click',function () {
+					lastBtn();
+				});
+				//下一页点击事件
+				$('.next').on('click',function () {
+					nextBtn();
+				});
+				//修改按钮
+				$(".updateBtn").on("click",function () {
+					var that = $(this);
+					updatebtn(that);
+				});
+			});
+			page=pages;
+	}
+	
+	//首页按钮
+	function shouyeBtn () {
+		$('#table1 tr').not('#tt').remove();
+			$.ajax({
+				type:"post",
+				url:"http://localhost:3000/orderlist/list",
+				async:true,
+				data:{
+					page:1,
+					orderstate:"未审核"
+				}
+			}).then(function (res) {
+				let result = res.rows;
+				console.log(result[0]._id);
+				var htmltd="";
+				for (var i in result){
+					htmltd+=`
+							<tr onmouseout="this.style.backgroundColor='#ffffff'" bgcolor="#ffffff"  onmouseover="this.style.backgroundColor='#E6F2FF'">
+							  <td height="25" align="center">${result[i]._id}</td>
+						      <td align="center" class="t5">${result[i].username}</td>
+						      <td align="center">${result[i].proname}</td>
+						      <td align="center">${result[i].ordernum}</td>
+						      <td align="center">${result[i].ordertime}</td>
+						      <td align="center">${result[i].orderstate}</td>
+						      <td align="center">${result[i].address}</td>
+						      <td align="center">${result[i].beizhu}</td>
+						      <td align="center"><a href='javascript:;' class="updateBtn" >可发货</a> </td>
+						    </tr>`;
+						      
+				}
+				htmltd+=`
+				<tr rowspan='2' height="25">
+			      <td colspan="10" bgcolor="#FFFFFF" align="center">&nbsp;
+				  	<span class='pagelink shouye'>首页&nbsp;&nbsp;</span> 
+				  	<span class='pagelink last'>上一页</span> 
+				  	  	&nbsp;&nbsp;<font color=green>1/${pages}</font>  &nbsp;&nbsp; 
+				  	<span class='pagelink next'>下一页&nbsp;&nbsp;</span> 
+				  	<span class='pagelink weiye'>尾页</span> 
+			      </td>
+			      <td bgcolor="#FFFFFF"></td>
+			    </tr>
+				`;
+				$('#table1').append(htmltd);
+				//尾页点击事件
+				$('.weiye').on('click',function () {
+					weiyeBtn();
+				});
+				//上一页点击事件
+				$('.last').on('click',function () {
+					lastBtn();
+				});
+				//下一页点击事件
+				$('.next').on('click',function () {
+					nextBtn();
+				});
+				//修改按钮
+				$(".updateBtn").on("click",function () {
+					var that = $(this);
+					updatebtn(that);
+				});
+			});
+			page=1;
+	}
+	//上一页
+	function lastBtn () {
+		$('#table1 tr').not('#tt').remove();
+		var p = page>1?--page:1;
+			$.ajax({
+				type:"post",
+				url:"http://localhost:3000/orderlist/list",
+				async:true,
+				data:{
+					page:p,
+					orderstate:"未审核"
+				}
+			}).then(function (res) {
+				let result = res.rows;
+				console.log(result[0]._id);
+				var htmltd="";
+				for (var i in result){
+					htmltd+=`
+							<tr onmouseout="this.style.backgroundColor='#ffffff'" bgcolor="#ffffff"  onmouseover="this.style.backgroundColor='#E6F2FF'">
+							  <td height="25" align="center">${result[i]._id}</td>
+						      <td align="center" class="t5">${result[i].username}</td>
+						      <td align="center">${result[i].proname}</td>
+						      <td align="center">${result[i].ordernum}</td>
+						      <td align="center">${result[i].ordertime}</td>
+						      <td align="center">${result[i].orderstate}</td>
+						      <td align="center">${result[i].address}</td>
+						      <td align="center">${result[i].beizhu}</td>
+						      <td align="center"><a href='javascript:;' class="updateBtn" >可发货</a> </td>
+						    </tr>`;
+						      
+				}
+				htmltd+=`
+				<tr rowspan='2' height="25">
+			      <td colspan="10" bgcolor="#FFFFFF" align="center">&nbsp;
+				  	<span class='pagelink shouye'>首页&nbsp;&nbsp;</span> 
+				  	<span class='pagelink last'>上一页</span> 
+				  	  	&nbsp;&nbsp;<font color=green>${p}/${pages}</font>  &nbsp;&nbsp; 
+				  	<span class='pagelink next'>下一页&nbsp;&nbsp;</span> 
+				  	<span class='pagelink weiye'>尾页</span> 
+			      </td>
+			      <td bgcolor="#FFFFFF"></td>
+			    </tr>
+				`;
+				$('#table1').append(htmltd);
+				//尾页点击事件
+				$('.weiye').on('click',function () {
+					weiyeBtn();
+				});
+				//首页点击事件
+				$('.shouye').on('click',function () {
+					shouyeBtn();
+				});
+				//上一页点击事件
+				$('.last').on('click',function () {
+					lastBtn();
+				});
+				//下一页点击事件
+				$('.next').on('click',function () {
+					nextBtn();
+				});
+				//修改按钮
+				$(".updateBtn").on("click",function () {
+					var that = $(this);
+					updatebtn(that);
+				});
+			});
+	}
+	//下一页
+	function nextBtn () {
+		$('#table1 tr').not('#tt').remove();
+		var p = page<pages?++page:pages
+			$.ajax({
+				type:"post",
+				url:"http://localhost:3000/orderlist/list",
+				async:true,
+				data:{
+					page:p,
+					orderstate:"未审核"
+				}
+			}).then(function (res) {
+				let result = res.rows;
+				console.log(result[0]._id);
+				var htmltd="";
+				for (var i in result){
+					htmltd+=`
+							<tr onmouseout="this.style.backgroundColor='#ffffff'" bgcolor="#ffffff"  onmouseover="this.style.backgroundColor='#E6F2FF'">
+							  <td height="25" align="center">${result[i]._id}</td>
+						      <td align="center" class="t5">${result[i].username}</td>
+						      <td align="center">${result[i].proname}</td>
+						      <td align="center">${result[i].ordernum}</td>
+						      <td align="center">${result[i].ordertime}</td>
+						      <td align="center">${result[i].orderstate}</td>
+						      <td align="center">${result[i].address}</td>
+						      <td align="center">${result[i].beizhu}</td>
+						      <td align="center"><a href='javascript:;' class="updateBtn" >可发货</a> </td>
+						    </tr>`;
+						      
+				}
+				htmltd+=`
+				<tr rowspan='2' height="25">
+			      <td colspan="10" bgcolor="#FFFFFF" align="center">&nbsp;
+				  	<span class='pagelink shouye'>首页&nbsp;&nbsp;</span> 
+				  	<span class='pagelink last'>上一页</span> 
+				  	  	&nbsp;&nbsp;<font color=green>${p}/${pages}</font>  &nbsp;&nbsp; 
+				  	<span class='pagelink next'>下一页&nbsp;&nbsp;</span> 
+				  	<span class='pagelink weiye'>尾页</span> 
+			      </td>
+			      <td bgcolor="#FFFFFF"></td>
+			    </tr>
+				`;
+				$('#table1').append(htmltd);
+				//尾页点击事件
+				$('.weiye').on('click',function () {
+					weiyeBtn();
+				});
+				//首页点击事件
+				$('.shouye').on('click',function () {
+					shouyeBtn();
+				});
+				//上一页点击事件
+				$('.last').on('click',function () {
+					lastBtn();
+				});
+				//下一页点击事件
+				$('.next').on('click',function () {
+					nextBtn();
+				});
+				//修改按钮
+				$(".updateBtn").on("click",function () {
+					var that = $(this);
+					updatebtn(that);
+				});
+			});
+	}
+	
+	//审核
+	var id = '';
+	function updatebtn (that) {
+		id = that.parent().parent().find('td').eq(0).html();
+		console.log(id);
+		$.ajax({
+			type:"put",
+			url:"http://localhost:3000/orderlist/data/"+id,
+			async:true,
+			data:{
+				orderstate:"可发货"
+			}
+		}).then(function (res) {
+			alert('已审核');
+			//刷新显示页面
+			$('#prolist').click();
+		});
+		
+	}
+	
+</script>
+
+</html>

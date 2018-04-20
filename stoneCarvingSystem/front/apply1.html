@@ -1,0 +1,222 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+ 
+<link  href="Css/layout.css" rel="stylesheet" type="text/css" />
+<link href="Css/cb.css" rel="stylesheet" type="text/css"   />
+<link  href="Css/n.css" rel="stylesheet" type="text/css" />
+<style>
+.biankuangs{ border:solid #A6D2FF 1px; border-top:0px; }
+#item_text2,#item_text1,#itemtypes2,#item_text3{ /**/display:none;}
+</style> 
+
+</head>
+
+<body>
+<table width="99%" height="25" border="0" align="center" cellpadding="0" cellspacing="0" style="margin-bottom:4px;">
+      <tr>
+        <td width="17" background="Images/bj4.gif"><img src="Picture/r.gif" width="16" height="16" /></td>
+        <td width="466" background="Images/bj4.gif">
+		</td>
+        <td width="162" align="center" background="Images/bj4.gif">
+		
+				</td>           
+      </tr>
+    </table>
+<table width="99%" border="0" align="center" cellpadding="0" cellspacing="0">
+          <tr>
+            <td width="1%" align="left" background="Images/b2.jpg"><img src="Picture/b1.jpg" width="10" height="26" /></td>
+            <td width="68%" background="Images/b2.jpg"><table width="211" border="0" align="left" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td width="20" align="left"><img src="Picture/tz.gif" width="10" height="16" /></td>
+                  <td width="191" align="left" class="biao">添加石雕产品的基本信息</td>
+                </tr>
+            </table></td>
+            <td width="31%" align="right" background="Images/b2.jpg"><img src="Picture/b3.jpg" width="9" height="26" /></td>
+          </tr>
+</table>
+<form method="post" enctype="multipart/form-data" name="form1" id="form1">
+<table width="99%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#AEDEF4">
+  <tr>
+    <td height="25" align="center" bgcolor="#FFF9DF">石雕名称</td>
+    <td colspan="7" align="left" bgcolor="#FFFFFF" class="t5">
+      <div align="left">
+  			<input name="proname" type="text" id="proname" size="70" />
+      </div></td>
+    </tr>
+  <tr>
+    <td height="25" align="center" bgcolor="#FFF9DF">石雕类型</td>
+    <td colspan="7" align="center" bgcolor="#FFFFFF" class="t5">
+	  <div align="left">
+	    <select name="protype" id="protype">
+	      <option value="">请选择...</option>
+	      <option value="1">small</option>
+	      <option value="2">middle</option>
+	      <option value="3">big</option>
+	    </select> </div></td>
+  </tr>
+  <!--上传图片-->
+  <tr>
+    <td height="25" align="center" bgcolor="#FFF9DF">上传图片</td>
+    <td colspan="7" align="center" bgcolor="#FFFFFF" class="t5">
+	  <div align="left">
+	  	<input type="file" name="fileToUpload" id="fileToUpload" class="fileupload" />
+	  </div>
+	  	<div class="img" style="width: 40px;text-align: left;">
+		  	<!--图片预览-->	
+		</div>
+	  <div style="display: none;" id="proimg">
+	  	<!--存放图片地址-->
+	  </div>
+    </td>
+  </tr>
+  
+    <tr>
+      <td width="10%" height="25" align="center" bgcolor="#FFF9DF">原价</td>
+      <td align="center" bgcolor="#FFFFFF" class="t5"> 
+        <div align="left">
+          <input name="proprice" type="text" id="proprice" value="" size="20"   />      
+       </div></td>
+      <td align="center" bgcolor="#FFF9DF" class="t5"><div align="center">是否推荐</div></td>
+      <td align="center" bgcolor="#FFFFFF" class="t5"><div align="left">
+        <input name="ispromotion" type="text" id="ispromotion" value="y" size="20" />(填y或者n)
+      </div></td>
+    </tr>
+    <tr>
+      <td height="25" align="center" bgcolor="#FFF9DF"> 促销价</td>
+      <td align="center" bgcolor="#FFFFFF" class="t5"><div align="left">
+        <input name="prosale" type="text" id="prosale" value="" size="20" />
+      </div></td>
+      <td align="center" bgcolor="#FFF9DF" class="t5"><div align="center">添加的数量</div></td>
+      <td colspan="5" align="left" bgcolor="#FFFFFF" class="t5">
+        <div align="left">
+          <input name="pronum" type="text" id="pronum" size="20" value="1"/>
+      </div></td>
+    </tr>
+    <!--文本编辑器-->
+    <tr>
+	    <td height="25" align="center" bgcolor="#FFF9DF">石雕描述</td>
+	    <td colspan="7" align="left" bgcolor="#FFFFFF" class="t5">
+	      <div align="left">
+	  			<textarea name="propress" rows="5" cols="100" id="propress" style="resize: none;" ></textarea>
+	      </div></td>
+    </tr>
+    <tr>
+      <td height="25" colspan="8" align="center" bgcolor="#FFFFFF"><label>
+        <input type="reset" id='clearBtn' value="重置" style="height: 20px;width: 80px;color: #00658f;background-color: #ade0f5;border: 1px solid #00658f;cursor: pointer;border-radius: 3px;"/>
+        <input type="button" name="Submit" id="addBtn" value="确定" style="height: 20px;width: 80px;color: #00658f;background-color: #ade0f5;border: 1px solid #00658f;cursor: pointer;border-radius: 3px;"/>
+      </label></td>
+    </tr>
+    
+  </table> 
+    
+ </form>
+ 
+ 
+ <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+ <!--文本编辑器-->
+<script type="text/javascript" src="Scripts/xheditor/xheditor-1.2.2.min.js"></script>
+<script type="text/javascript" src="Scripts/xheditor/xheditor_lang/zh-cn.js"></script>
+ <script type="text/javascript">
+ 	$('#addBtn').on('click',function () {
+ 		if($('#proname').val()=='' || $('#protype').val()=='' || $('#proprice').val()=='' || $('#prosale').val()=='' || $('#propress').val()=='' || $('#ispromotion').val()=='' || $('#pronum').val()==''){
+ 			alert('请填写完信息后再确认添加');
+ 		}else{
+ 			var proType='';
+ 			if($('#protype').val()==1){
+ 				proType="small";
+ 			}else if($('#protype').val()==2){
+ 				proType="middle";
+ 			}else if($('#protype').val()==3){
+ 				proType="big";
+ 			}
+ 			console.log($('#proimg').html());
+ 			$.ajax({
+ 				type:"post",
+ 				url:"http://localhost:3000/pro/data",
+ 				async:true,
+ 				data:{
+ 					proname:$('#proname').val(),
+ 					protype:proType,
+ 					proimg:$('#proimg').html(),
+ 					proprice:$('#proprice').val(),
+ 					prosale:$('#prosale').val(),
+ 					propress:$('#propress').val(),
+ 					ispromotion:$('#ispromotion').val(),
+ 					pronum:$('#pronum').val()
+ 				}
+ 			}).then(function (res) {
+ 				console.log(res);
+ 				alert('产品添加成功');
+ 				$('#clearBtn').click();
+ 			});
+ 		}
+ 	});
+ 	
+ 	//编辑器思密达
+ 	$(pageInit);
+	function pageInit()
+	{
+		$('#propress').xheditor({
+			html5Upload:false,
+			upMultiple:'1',//允许上传一个
+
+			upLinkUrl:"upload.php",
+			upLinkExt:"zip,rar,txt",
+
+			upImgUrl:"../admin/uploadImg",
+			upImgExt:"jpg,jpeg,gif,png",
+
+			upFlashUrl:"upload.php",
+			upFlashExt:"swf",
+
+			upMediaUrl:"upload.php",
+			upMediaExt:"wmv,avi,wma,mp3,mid"
+		});
+	}
+	function insertUpload(arrMsg)
+	{console.log(arrMsg)
+		var i,msg;
+		for(i=0;i<arrMsg.length;i++)
+		{
+			msg=arrMsg[i];
+			$("#uploadList").append('<option value="'+msg.id+'">'+msg.localname+'</option>');
+		}
+	}
+	function submitForm(){$('#frmDemo').submit();}
+	
+	
+	
+	// 图片上传
+$('.fileupload').change(function(event) {
+	console.log(123);
+    if ($('.fileupload').val().length) {
+        var fileName = $('.fileupload').val();
+        var extension = fileName.substring(fileName.lastIndexOf('.'), fileName.length).toLowerCase();
+        if (extension == ".jpg" || extension == ".png") {
+          var data = new FormData();
+          data.append('fulAvatar', $('#fileToUpload')[0].files[0]);
+          $.ajax({
+              url: 'http://localhost:3000/pro/api/uploadImg',
+              type: 'POST',
+              data: data,
+              cache: false,
+              contentType: false, //不可缺参数
+              processData: false, //不可缺参数
+              success: function(data) {
+                  console.log('-------upload img:', data);
+                  $('#proimg').html(data.result);
+              },
+              error: function() {
+                  console.log('error');
+              }
+          });
+        }
+    }
+});
+ </script>
+ 
+</body>
+</html>

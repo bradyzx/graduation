@@ -1,0 +1,868 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+ 
+<link  href="Css/layout.css" rel="stylesheet" type="text/css" />
+<link href="Css/cb.css" rel="stylesheet" type="text/css"   />
+<link  href="Css/n.css" rel="stylesheet" type="text/css" />
+<style>
+.biankuangs{ border:solid #A6D2FF 1px; border-top:0px;   }
+#xueke,#item_text2,#item_text1,#itemtypes2,#item_text3{ /**/display:none;}
+.pagelink{cursor: pointer;}
+</style> 
+</head>
+
+<body>
+<table width="99%" height="25" border="0" align="center" cellpadding="0" cellspacing="0" style="margin-bottom:4px;">
+      <tr>
+        <td width="17" background="Images/bj4.gif"><img src="Picture/r.gif" width="16" height="16" /></td>
+        <td width="466" background="Images/bj4.gif">	
+		</td>
+        <td width="162" align="center" background="Images/bj4.gif">
+		
+				<a href="apply1.php"></a>
+				</td>           
+      </tr>
+    </table>
+<table width="99%" border="0" align="center" cellpadding="0" cellspacing="0">
+          <tr>
+            <td width="1%" align="left" background="Images/b2.jpg"><img src="Picture/b1.jpg" width="10" height="26" /></td>
+            <td width="68%" background="Images/b2.jpg"><table width="124" border="0" align="left" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td width="20" align="left"><img src="Picture/tz.gif" width="10" height="16" /></td>
+                  <td width="104" align="left" class="biao">石雕商品搜索</td>
+                </tr>
+            </table></td>
+            <td width="31%" align="right" background="Images/b2.jpg"><img src="Picture/b3.jpg" width="9" height="26" /></td>
+          </tr>
+</table>
+<table width="99%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#AEDEF4">
+    <tr>
+      <td align="center" bgcolor="#E2F7FE"><form id="form1" name="form1" method="get" action="">
+    	  <table width="50%" border="0" cellspacing="1" cellpadding="3">
+        <tr>
+          <td width="10%" height="25" align="center">石雕名称：</td>
+          <td width="14%" align="left"><label>
+            <input name="itemname" type="text" id="itemname" size="20" />
+          </label></td>
+          <td width="8%"><input type="button" name="button" value="搜索" class="searchBtn"/></td>
+        </tr>
+      </table>
+	        </form></td>
+    </tr>
+</table>
+
+<table width="50%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td height="5"></td>
+  </tr>
+</table>
+  <table width="99%" border="0" align="center" cellpadding="0" cellspacing="0">
+          <tr>
+            <td width="1%" align="left" background="Images/b2.jpg"><img src="Picture/b1.jpg" width="10" height="26" /></td>
+            <td width="68%" background="Images/b2.jpg"><table width="124" border="0" align="left" cellpadding="0" cellspacing="0">
+                <tr style="position: relative;">
+                  <td width="20" align="left"><img src="Picture/tz.gif" width="10" height="16" /></td>
+                  <td width="104" align="left" class="biao" >商品列表<span id="prolist" style="position: absolute;top: 92px;left: 108px;height: 22px;cursor: pointer;">显示所有商品</span></td>
+                </tr>
+            </table></td>
+            <td width="31%" align="right" background="Images/b2.jpg"><img src="Picture/b3.jpg" width="9" height="26" /></td>
+          </tr>
+</table>
+  <table id="table1" width="99%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#AEDEF4" style="border:1px solid #AEDEF4">
+    <tr id="tt">
+      <td width="5%" height="25" align="center" bgcolor="#EFFBFE">ID</td>
+      <td align="center" bgcolor="#EFFBFE">石雕类型</td>
+      <td align="center" bgcolor="#EFFBFE">石雕名称</td>
+      <td align="center" bgcolor="#EFFBFE">石雕图片</td>
+      <td align="center" bgcolor="#EFFBFE">原价</td>
+      <td align="center" bgcolor="#EFFBFE">促销价</td>
+      <td align="center" bgcolor="#EFFBFE">石雕描述</td>
+      <td align="center" bgcolor="#EFFBFE">是否推荐</td>
+      <td align="center" bgcolor="#EFFBFE">库存</td>
+      <td align="center" bgcolor="#EFFBFE">操作</td>
+    </tr>
+    <tr >
+    	<td colspan="9" height="30">点击显示所有商品查看</td>
+    </tr>
+    <!--显示             数据库          数据的行列-->
+		<!--<tr onmouseout="this.style.backgroundColor='#ffffff'" bgcolor="#ffffff"  onmouseover="this.style.backgroundColor='#E6F2FF'">
+	      <td height="25" align="center"  >0000000000000000000000001</td>
+	      <td align="center" class="t5"   ><div align="left"><strong>small</strong></div></td>
+	      <td align="center">青田石雕</td>
+	      <td align="center">1111</td>
+	      <td align="center">1000</td>
+	      <td align="center">这是一个模板石雕</td>
+	      <td align="center">y</td>
+	      <td align="center">100</td>
+	   </tr>-->
+	<!--分页-->
+	<!--<tr rowspan='2' height="25">
+      <td colspan="10" bgcolor="#FFFFFF" align="center">&nbsp;
+	  	<span class='pagelink'><</span> <span class='pagelink'><<</span> <a class='pagelink' href='#?NowPage=1'><font color=green>[1]</font></a>  <span class='pagelink'>>></span> <span class='pagelink'>></span> 转到第&nbsp;<input id='JumpSelect' type='text' size='2' value='1'onBlur="javascript:if(isNaN(parseInt(this.value)) || parseInt(this.value) > 1){alert('您输入的数字只能在 1 ～ 1之间，请重新输入'); return false;}location.href='#" title='鼠标外部单击，文章转向'> 页	  
+      </td>
+      <td bgcolor="#FFFFFF"></td>
+    </tr>-->
+</table>
+
+<!--修改界面-->
+<div id="updateData" style="display: none;position: absolute;left: 0px;top: 29px;width: 100%;">
+	<span style="position: absolute;right: 18px;top: 4px;color: red;cursor: pointer;border: solid 1px #ffffff;">X</span>
+	<table width="99%" border="0" align="center" cellpadding="0" cellspacing="0">
+          <tr>
+            <td width="1%" align="left" background="Images/b2.jpg"><img src="Picture/b1.jpg" width="10" height="26" /></td>
+            <td width="68%" background="Images/b2.jpg"><table width="211" border="0" align="left" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td width="20" align="left"><img src="Picture/tz.gif" width="10" height="16" /></td>
+                  <td width="191" align="left" class="biao">修改石雕产品的基本信息</td>
+                </tr>
+            </table></td>
+            <td width="31%" align="right" background="Images/b2.jpg"><img src="Picture/b3.jpg" width="9" height="26" /></td>
+          </tr>
+	</table>
+	<form method="post" enctype="multipart/form-data" name="form1" id="form1">
+	<table width="99%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#AEDEF4">
+	  <tr>
+	    <td height="25" align="center" bgcolor="#FFF9DF">石雕名称</td>
+	    <td colspan="7" align="left" bgcolor="#FFFFFF" class="t5">
+	      <div align="left">
+	  			<input name="proname" type="text" id="proname" size="70" />
+	      </div></td>
+	    </tr>
+	  <tr>
+	    <td height="25" align="center" bgcolor="#FFF9DF">石雕类型</td>
+	    <td colspan="7" align="center" bgcolor="#FFFFFF" class="t5">
+		  <div align="left">
+		    <select name="protype" id="protype">
+		      <option value="">请选择...</option>
+		      <option value="1">small</option>
+		      <option value="2">middle</option>
+		      <option value="3">big</option>
+		    </select></div></td>
+	  </tr>
+	  
+	  <!--更改图片-->
+	  <tr>
+	    <td height="25" align="center" bgcolor="#FFF9DF">上传图片</td>
+	    <td colspan="7" align="left" bgcolor="#FFFFFF" class="t5">
+		  <div align="left">
+		  	<input type="file" name="fileToUpload" id="fileToUpload" class="fileupload" />
+		  </div>
+		  	<div class="img" style="width: 40px;text-align: left;">
+		  		
+		  	</div>
+		  <div align="left" style="display: none;" id="proimg">
+		  </div>
+	    </td>
+	  </tr>
+	  
+	    <tr>
+	      <td width="10%" height="25" align="center" bgcolor="#FFF9DF">原价</td>
+	      <td align="center" bgcolor="#FFFFFF" class="t5"> 
+	        <div align="left">
+	          <input name="proprice" type="text" id="proprice" value="" size="20"   />      
+	       </div></td>
+	      <td align="center" bgcolor="#FFF9DF" class="t5"><div align="center">是否推荐</div></td>
+	      <td align="center" bgcolor="#FFFFFF" class="t5"><div align="left">
+	        <input name="ispromotion" type="text" id="ispromotion" value="y" size="20" />(填y或者n)
+	      </div></td>
+	    </tr>
+	    <tr>
+	      <td height="25" align="center" bgcolor="#FFF9DF"> 促销价</td>
+	      <td align="center" bgcolor="#FFFFFF" class="t5"><div align="left">
+	        <input name="prosale" type="text" id="prosale" value="" size="20" />
+	      </div></td>
+	      <td align="center" bgcolor="#FFF9DF" class="t5"><div align="center">添加的数量</div></td>
+	      <td colspan="5" align="left" bgcolor="#FFFFFF" class="t5">
+	        <div align="left">
+	          <input name="pronum" type="text" id="pronum" size="20" value="1"/>
+	      </div></td>
+	    </tr>
+	    <!--文本编辑器-->
+	    <tr>
+		    <td height="25" align="center" bgcolor="#FFF9DF">石雕描述</td>
+		    <td colspan="7" align="left" bgcolor="#FFFFFF" class="t5">
+		      <div align="left">
+		  			<textarea name="propress" rows="5" cols="100" id="propress" style="resize: none;" ></textarea>
+		      </div></td>
+	    </tr>
+	    <tr>
+	      <td height="25" colspan="8" align="center" bgcolor="#FFFFFF"><label>
+	        <input type="button" id='closeBtn' value="取消" style="height: 20px;width: 80px;color: #00658f;background-color: #ade0f5;border: 1px solid #00658f;cursor: pointer;border-radius: 3px;"/>
+	        <input type="button" name="Submit" id="addBtn" value="确定" style="height: 20px;width: 80px;color: #00658f;background-color: #ade0f5;border: 1px solid #00658f;cursor: pointer;border-radius: 3px;"/>
+	      </label></td>
+	    </tr>
+	    
+	  </table> 
+	    
+	 </form>
+</div>
+
+
+
+
+
+</body>
+
+<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+ <!--文本编辑器-->
+<script type="text/javascript" src="Scripts/xheditor/xheditor-1.2.2.min.js"></script>
+<script type="text/javascript" src="Scripts/xheditor/xheditor_lang/zh-cn.js"></script>
+<script type="text/javascript">
+	//显示商品列表
+	//    总页数          一页的数据       当前页
+	var pages=0,limit=0,page=0;
+		function fn () {
+			$.ajax({
+				type:"post",
+				url:"http://localhost:3000/pro/list",
+				async:true
+			}).then(function (res) {
+				pages=res.pages;
+				limit=res.limit;
+				page=res.page;
+				console.log('总页数：'+pages+'一页的数据行：'+limit+'当前页：'+page);
+				let result = res.rows;
+				let htmltd='';
+//				console.log(result);
+				let red = '';
+				for (var i in result){
+					if(result[i].pronum<=20){
+						    red = '<td align="center" style="color:red">'+result[i].pronum+'</td>';
+					}else{
+						 red = '<td align="center">'+result[i].pronum+'</td>';
+					}
+					htmltd+=`
+							<tr onmouseout="this.style.backgroundColor='#ffffff'" bgcolor="#ffffff"  onmouseover="this.style.backgroundColor='#E6F2FF'">
+							  <td height="25" align="center">${result[i]._id}</td>
+						      <td align="center" class="t5">${result[i].protype}</td>
+						      <td align="center">${result[i].proname}</td>
+						      <td align="center"><img src="../admin/public${result[i].proimg}" width="40px"/></td>
+						      <td align="center">${result[i].proprice}</td>
+						      <td align="center">${result[i].prosale}</td>
+						      <td align="center">${result[i].propress}</td>
+						      <td align="center">${result[i].ispromotion}</td>
+						      ${red}
+						      <td align="center"><a href='javascript:;' class="updateBtn">修改</a>  <a href='javascript:;' class="deleteBtn">下架</a></td>
+						    </tr>`;
+						      
+				}
+				htmltd+=`
+						<tr rowspan='2' height="25">
+					      <td colspan="10" bgcolor="#FFFFFF" align="center">&nbsp;
+						  	<span class='pagelink shouye'>首页&nbsp;&nbsp;</span> 
+						  	<span class='pagelink last'>上一页</span> 
+						  	  	&nbsp;&nbsp;<font color=green>${page}/${pages}</font>  &nbsp;&nbsp; 
+						  	<span class='pagelink next'>下一页&nbsp;&nbsp;</span> 
+						  	<span class='pagelink weiye'>尾页</span> 
+					      </td>
+					      <td bgcolor="#FFFFFF"></td>
+					    </tr>
+						`;
+				$('#table1').append(htmltd);
+				//尾页点击事件
+				$('.weiye').on('click',function () {
+					weiyeBtn();
+				});
+				//首页点击事件
+				$('.shouye').on('click',function () {
+					shouyeBtn();
+				});
+				//上一页点击事件
+				$('.last').on('click',function () {
+					lastBtn();
+				});
+				//下一页点击事件
+				$('.next').on('click',function () {
+					nextBtn();
+				});
+				//修改按钮
+				$(".updateBtn").on("click",function () {
+					var that = $(this);
+					updatebtn(that);
+				});
+				//下架按钮
+				$(".deleteBtn").on("click",function () {
+						if(confirm('确定下架商品')){
+							var that = $(this);
+							deletebtn(that);
+						}
+				});
+			});
+		}
+		$('#prolist').on('click',function(){
+			$('#table1 tr').not('#tt').remove();
+			fn();
+		});
+		$('#prolist').click();
+		
+	//搜索
+		$('.searchBtn').on('click',function () {
+			$.ajax({
+				type:"post",
+				url:"http://localhost:3000/pro/list",
+				async:true,
+				data:{
+					proname:$('#itemname').val()
+				}
+			}).then(function (res) {
+				pages=res.pages;
+				limit=res.limit;
+				page=res.page;
+				var result = res.rows;
+				var searchtd='';
+				let red = '';
+				for (var i in result){
+					if(result[i].pronum<=20){
+						    red = '<td align="center" style="color:red">'+result[i].pronum+'</td>';
+					}else{
+						 red = '<td align="center">'+result[i].pronum+'</td>';
+					}
+					searchtd+=`
+							<tr onmouseout="this.style.backgroundColor='#ffffff'" bgcolor="#ffffff"  onmouseover="this.style.backgroundColor='#E6F2FF'">
+							  <td height="25" align="center">${result[i]._id}</td>
+						      <td align="center" class="t5">${result[i].protype}</td>
+						      <td align="center">${result[i].proname}</td>
+						      <td align="center"><img src="../admin/public${result[i].proimg}" width="40px"/></td>
+						      <td align="center">${result[i].proprice}</td>
+						      <td align="center">${result[i].prosale}</td>
+						      <td align="center">${result[i].propress}</td>
+						      <td align="center">${result[i].ispromotion}</td>
+						      ${red}
+						      <td align="center"><a href='javascript:;' class="updateBtn">修改</a>  <a href='javascript:;' class="deleteBtn">下架</a></td>
+						    </tr>
+						    `;
+						      
+				}
+				
+				searchtd+=`
+						<tr rowspan='2' height="25">
+					      <td colspan="10" bgcolor="#FFFFFF" align="center">&nbsp;
+						  	<span class='pagelink shouye'>首页&nbsp;&nbsp;</span> 
+						  	<span class='pagelink last'>上一页</span> 
+						  	  	&nbsp;&nbsp;<font color=green>${page}/${pages}</font>  &nbsp;&nbsp; 
+						  	<span class='pagelink next'>下一页&nbsp;&nbsp;</span> 
+						  	<span class='pagelink weiye'>尾页</span> 
+					      </td>
+					      <td bgcolor="#FFFFFF"></td>
+					    </tr>
+						`;
+				$('#table1 tr').not('#tt').remove();
+				$('#table1').append(searchtd);
+				
+				//尾页点击事件
+				$('.weiye').on('click',function () {
+					weiyeBtn();
+				});
+				//首页点击事件
+				$('.shouye').on('click',function () {
+					shouyeBtn();
+				});
+				//上一页点击事件
+				$('.last').on('click',function () {
+					lastBtn();
+				});
+				//下一页点击事件
+				$('.next').on('click',function () {
+					nextBtn();
+				});
+				//修改按钮
+				$(".updateBtn").on("click",function () {
+					var that = $(this);
+					updatebtn(that);
+				});
+				//下架按钮
+				$(".deleteBtn").on("click",function () {
+						if(confirm('确定下架商品')){
+							var that = $(this);
+							deletebtn(that);
+						}
+				});
+			});
+		});
+	
+	//尾页按钮
+	function weiyeBtn () {
+		$('#table1 tr').not('#tt').remove();
+			$.ajax({
+				type:"post",
+				url:"http://localhost:3000/pro/list",
+				async:true,
+				data:{
+					page:pages
+				}
+			}).then(function (res) {
+				let result = res.rows;
+				console.log(result[0]._id);
+				var htmltd="";
+				let red = '';
+				for (var i in result){
+					if(result[i].pronum<=20){
+						    red = '<td align="center" style="color:red">'+result[i].pronum+'</td>';
+					}else{
+						 red = '<td align="center">'+result[i].pronum+'</td>';
+					}
+					htmltd+=`
+							<tr onmouseout="this.style.backgroundColor='#ffffff'" bgcolor="#ffffff"  onmouseover="this.style.backgroundColor='#E6F2FF'">
+							  <td height="25" align="center">${result[i]._id}</td>
+						      <td align="center" class="t5">${result[i].protype}</td>
+						      <td align="center">${result[i].proname}</td>
+						      <td align="center"><img src="../admin/public${result[i].proimg}" width="40px"/></td>
+						      <td align="center">${result[i].proprice}</td>
+						      <td align="center">${result[i].prosale}</td>
+						      <td align="center">${result[i].propress}</td>
+						      <td align="center">${result[i].ispromotion}</td>
+						      ${red}
+						      <td align="center"><a href='javascript:;' class="updateBtn">修改</a>  <a href='javascript:;' class="deleteBtn">下架</a></td>
+						    </tr>`;
+						      
+				}
+				htmltd+=`
+				<tr rowspan='2' height="25">
+			      <td colspan="10" bgcolor="#FFFFFF" align="center">&nbsp;
+				  	<span class='pagelink shouye'>首页&nbsp;&nbsp;</span> 
+				  	<span class='pagelink last'>上一页</span> 
+				  	  	&nbsp;&nbsp;<font color=green>${pages}/${pages}</font>  &nbsp;&nbsp; 
+				  	<span class='pagelink next'>下一页&nbsp;&nbsp;</span> 
+				  	<span class='pagelink weiye'>尾页</span> 
+			      </td>
+			      <td bgcolor="#FFFFFF"></td>
+			    </tr>
+				`;
+				$('#table1').append(htmltd);
+				//首页点击事件
+				$('.shouye').on('click',function () {
+					shouyeBtn();
+				});
+				//上一页点击事件
+				$('.last').on('click',function () {
+					lastBtn();
+				});
+				//下一页点击事件
+				$('.next').on('click',function () {
+					nextBtn();
+				});
+				//修改按钮
+				$(".updateBtn").on("click",function () {
+					var that = $(this);
+					updatebtn(that);
+				});
+				//下架按钮
+				$(".deleteBtn").on("click",function () {
+						if(confirm('确定下架商品')){
+							var that = $(this);
+							deletebtn(that);
+						}
+				});
+			});
+			page=pages;
+	}
+	
+	//首页按钮
+	function shouyeBtn () {
+		$('#table1 tr').not('#tt').remove();
+			$.ajax({
+				type:"post",
+				url:"http://localhost:3000/pro/list",
+				async:true,
+				data:{
+					page:1
+				}
+			}).then(function (res) {
+				let result = res.rows;
+				console.log(result[0]._id);
+				var htmltd="";
+				let red = '';
+				for (var i in result){
+					if(result[i].pronum<=20){
+						    red = '<td align="center" style="color:red">'+result[i].pronum+'</td>';
+					}else{
+						 red = '<td align="center">'+result[i].pronum+'</td>';
+					}
+					htmltd+=`
+							<tr onmouseout="this.style.backgroundColor='#ffffff'" bgcolor="#ffffff"  onmouseover="this.style.backgroundColor='#E6F2FF'">
+							  <td height="25" align="center">${result[i]._id}</td>
+						      <td align="center" class="t5">${result[i].protype}</td>
+						      <td align="center">${result[i].proname}</td>
+						      <td align="center"><img src="../admin/public${result[i].proimg}" width="40px"/></td>
+						      <td align="center">${result[i].proprice}</td>
+						      <td align="center">${result[i].prosale}</td>
+						      <td align="center">${result[i].propress}</td>
+						      <td align="center">${result[i].ispromotion}</td>
+						      ${red}
+						      <td align="center"><a href='javascript:;' class="updateBtn">修改</a>  <a href='javascript:;' class="deleteBtn">下架</a></td>
+						    </tr>`;
+						      
+				}
+				htmltd+=`
+				<tr rowspan='2' height="25">
+			      <td colspan="10" bgcolor="#FFFFFF" align="center">&nbsp;
+				  	<span class='pagelink shouye'>首页&nbsp;&nbsp;</span> 
+				  	<span class='pagelink last'>上一页</span> 
+				  	  	&nbsp;&nbsp;<font color=green>1/${pages}</font>  &nbsp;&nbsp; 
+				  	<span class='pagelink next'>下一页&nbsp;&nbsp;</span> 
+				  	<span class='pagelink weiye'>尾页</span> 
+			      </td>
+			      <td bgcolor="#FFFFFF"></td>
+			    </tr>
+				`;
+				$('#table1').append(htmltd);
+				//尾页点击事件
+				$('.weiye').on('click',function () {
+					weiyeBtn();
+				});
+				//上一页点击事件
+				$('.last').on('click',function () {
+					lastBtn();
+				});
+				//下一页点击事件
+				$('.next').on('click',function () {
+					nextBtn();
+				});
+				//修改按钮
+				$(".updateBtn").on("click",function () {
+					var that = $(this);
+					updatebtn(that);
+				});
+				//下架按钮
+				$(".deleteBtn").on("click",function () {
+						if(confirm('确定下架商品')){
+							var that = $(this);
+							deletebtn(that);
+						}
+				});
+			});
+			page=1;
+	}
+	//上一页
+	function lastBtn () {
+		$('#table1 tr').not('#tt').remove();
+		var p = page>1?--page:1;
+			$.ajax({
+				type:"post",
+				url:"http://localhost:3000/pro/list",
+				async:true,
+				data:{
+					page:p
+				}
+			}).then(function (res) {
+				let result = res.rows;
+				console.log(result[0]._id);
+				var htmltd="";
+				let red = '';
+				for (var i in result){
+					if(result[i].pronum<=20){
+						    red = '<td align="center" style="color:red">'+result[i].pronum+'</td>';
+					}else{
+						 red = '<td align="center">'+result[i].pronum+'</td>';
+					}
+					htmltd+=`
+							<tr onmouseout="this.style.backgroundColor='#ffffff'" bgcolor="#ffffff"  onmouseover="this.style.backgroundColor='#E6F2FF'">
+							  <td height="25" align="center">${result[i]._id}</td>
+						      <td align="center" class="t5">${result[i].protype}</td>
+						      <td align="center">${result[i].proname}</td>
+						      <td align="center"><img src="../admin/public${result[i].proimg}" width="40px"/></td>
+						      <td align="center">${result[i].proprice}</td>
+						      <td align="center">${result[i].prosale}</td>
+						      <td align="center">${result[i].propress}</td>
+						      <td align="center">${result[i].ispromotion}</td>
+						      ${red}
+						      <td align="center"><a href='javascript:;' class="updateBtn">修改</a>  <a href='javascript:;' class="deleteBtn">下架</a></td>
+						    </tr>`;
+						      
+				}
+				htmltd+=`
+				<tr rowspan='2' height="25">
+			      <td colspan="10" bgcolor="#FFFFFF" align="center">&nbsp;
+				  	<span class='pagelink shouye'>首页&nbsp;&nbsp;</span> 
+				  	<span class='pagelink last'>上一页</span> 
+				  	  	&nbsp;&nbsp;<font color=green>${p}/${pages}</font>  &nbsp;&nbsp; 
+				  	<span class='pagelink next'>下一页&nbsp;&nbsp;</span> 
+				  	<span class='pagelink weiye'>尾页</span> 
+			      </td>
+			      <td bgcolor="#FFFFFF"></td>
+			    </tr>
+				`;
+				$('#table1').append(htmltd);
+				//尾页点击事件
+				$('.weiye').on('click',function () {
+					weiyeBtn();
+				});
+				//首页点击事件
+				$('.shouye').on('click',function () {
+					shouyeBtn();
+				});
+				//上一页点击事件
+				$('.last').on('click',function () {
+					lastBtn();
+				});
+				//下一页点击事件
+				$('.next').on('click',function () {
+					nextBtn();
+				});
+				//修改按钮
+				$(".updateBtn").on("click",function () {
+					var that = $(this);
+					updatebtn(that);
+				});
+				//下架按钮
+				$(".deleteBtn").on("click",function () {
+						if(confirm('确定下架商品')){
+							var that = $(this);
+							deletebtn(that);
+						}
+				});
+			});
+	}
+	//下一页
+	function nextBtn () {
+		$('#table1 tr').not('#tt').remove();
+		var p = page<pages?++page:pages
+			$.ajax({
+				type:"post",
+				url:"http://localhost:3000/pro/list",
+				async:true,
+				data:{
+					page:p
+				}
+			}).then(function (res) {
+				let result = res.rows;
+				console.log(result[0]._id);
+				var htmltd="";
+				let red = '';
+				for (var i in result){
+					if(result[i].pronum<=20){
+						    red = '<td align="center" style="color:red">'+result[i].pronum+'</td>';
+					}else{
+						 red = '<td align="center">'+result[i].pronum+'</td>';
+					}
+					htmltd+=`
+							<tr onmouseout="this.style.backgroundColor='#ffffff'" bgcolor="#ffffff"  onmouseover="this.style.backgroundColor='#E6F2FF'">
+							  <td height="25" align="center">${result[i]._id}</td>
+						      <td align="center" class="t5">${result[i].protype}</td>
+						      <td align="center">${result[i].proname}</td>
+						      <td align="center"><img src="../admin/public${result[i].proimg}" width="40px"/></td>
+						      <td align="center">${result[i].proprice}</td>
+						      <td align="center">${result[i].prosale}</td>
+						      <td align="center">${result[i].propress}</td>
+						      <td align="center">${result[i].ispromotion}</td>
+						      ${red}
+						      <td align="center"><a href='javascript:;' class="updateBtn">修改</a>  <a href='javascript:;' class="deleteBtn">下架</a></td>
+						    </tr>`;
+						      
+				}
+				htmltd+=`
+				<tr rowspan='2' height="25">
+			      <td colspan="10" bgcolor="#FFFFFF" align="center">&nbsp;
+				  	<span class='pagelink shouye'>首页&nbsp;&nbsp;</span> 
+				  	<span class='pagelink last'>上一页</span> 
+				  	  	&nbsp;&nbsp;<font color=green>${p}/${pages}</font>  &nbsp;&nbsp; 
+				  	<span class='pagelink next'>下一页&nbsp;&nbsp;</span> 
+				  	<span class='pagelink weiye'>尾页</span> 
+			      </td>
+			      <td bgcolor="#FFFFFF"></td>
+			    </tr>
+				`;
+				$('#table1').append(htmltd);
+				//尾页点击事件
+				$('.weiye').on('click',function () {
+					weiyeBtn();
+				});
+				//首页点击事件
+				$('.shouye').on('click',function () {
+					shouyeBtn();
+				});
+				//上一页点击事件
+				$('.last').on('click',function () {
+					lastBtn();
+				});
+				//下一页点击事件
+				$('.next').on('click',function () {
+					nextBtn();
+				});
+				//修改按钮
+				$(".updateBtn").on("click",function () {
+					var that = $(this);
+					updatebtn(that);
+				});
+				//下架按钮
+				$(".deleteBtn").on("click",function () {
+						if(confirm('确定下架商品')){
+							var that = $(this);
+							deletebtn(that);
+						}
+				});
+			});
+	}
+	
+	//修改
+	var id = '';
+	function updatebtn (that) {
+		id = that.parent().parent().find('td').eq(0).html();
+		console.log(id);
+		$("#updateData").show();
+		//石雕名称
+		$("#proname").val(that.parent().parent().find('td').eq(2).html());
+		//石雕类型
+		let type = 0;
+		if(that.parent().parent().find('td').eq(1).html()=='small'){
+			type=1;
+		}else if(that.parent().parent().find('td').eq(1).html()=='middle'){
+			type=2;
+		}else if(that.parent().parent().find('td').eq(1).html()=='big'){
+			type=3;
+		}
+		$("#protype").val(type);
+		//石雕原价
+		$("#proprice").val(that.parent().parent().find('td').eq(4).html());
+		//石雕促销价
+		$("#prosale").val(that.parent().parent().find('td').eq(5).html());
+		//石雕描述
+		$("#propress").val(that.parent().parent().find('td').eq(6).html());
+		//是否推荐
+		$("#ispromotion").val(that.parent().parent().find('td').eq(7).html());
+		$("#ispromotion").on("blur",function(){
+			if($(this).val()=='y' || $(this).val()=='Y' || $(this).val()=='n' || $(this).val()=='N'){
+				$("#ispromotion").val($(this).val());
+			}else{
+				alert('是否推荐请正确填写');	
+			}
+		});
+		//库存
+		$("#pronum").val(that.parent().parent().find('td').eq(8).html());
+		console.log(that.parent().parent().find('td').eq(3).html())
+		$('.img').html(that.parent().parent().find('td').eq(3).html());
+		
+	}
+	//下架
+	function deletebtn (that) {
+		var deleteid = that.parent().parent().find('td').eq(0).html();
+//		console.log(id);
+		$.ajax({
+			type:"delete",
+			url:"http://localhost:3000/pro/data/"+deleteid,
+			async:true
+		}).then(function (res) {
+			alert('下架商品成功');
+			//刷新显示页面
+			$('#prolist').click();
+		});
+	}
+	
+	$("#updateData span").on("click",function () {
+		$("#updateData").hide();
+	});
+	$("#closeBtn").on("click",function () {
+		$("#updateData").hide();
+	});
+	//提交按钮
+	$("#addBtn").on("click",function () {
+		if($('#proname').val()=='' || $('#protype').val()=='' || $('#proprice').val()=='' || $('#prosale').val()=='' || $('#propress').val()=='' || $('#ispromotion').val()=='' || $('#pronum').val()==''){
+ 			alert('请填写完信息后再提交');
+ 		}else{
+ 			if($("#ispromotion").val()=='y' || $("#ispromotion").val()=='Y' || $("#ispromotion").val()=='n' || $("#ispromotion").val()=='N'){
+// 				alert(1);
+				var proType='';
+	 			if($('#protype').val()==1){
+	 				proType="small";
+	 			}else if($('#protype').val()==2){
+	 				proType="middle";
+	 			}else if($('#protype').val()==3){
+	 				proType="big";
+	 			}
+				var d = {
+					proname:$('#proname').val(),
+ 					protype:proType,
+ 					proimg:$('#proimg').html(),
+ 					proprice:$('#proprice').val(),
+ 					prosale:$('#prosale').val(),
+ 					propress:$('#propress').val(),
+ 					ispromotion:$('#ispromotion').val(),
+ 					pronum:$('#pronum').val()
+				};
+ 				$.ajax({
+ 					type:"put",
+ 					url:"http://localhost:3000/pro/data/"+id,
+ 					async:true,
+ 					data:d
+ 				}).then(function (res) {
+ 					alert('修改成功');
+ 					//隐藏修改的界面
+ 					$("#updateData").hide();
+ 					//刷新显示页面
+   					$('#prolist').click();
+ 				});
+ 			}else{
+ 				alert('是否推荐请正确填写');	
+ 			}
+ 		}
+	});
+	
+	
+	
+	//文本编辑器
+	//图片思密达
+ 	$(pageInit);
+	function pageInit()
+	{
+		$('#propress').xheditor({
+			html5Upload:false,
+			upMultiple:'1',//允许上传一个
+
+			upLinkUrl:"upload.php",
+			upLinkExt:"zip,rar,txt",
+
+			upImgUrl:"../admin/uploadImg",
+			upImgExt:"jpg,jpeg,gif,png",
+
+			upFlashUrl:"upload.php",
+			upFlashExt:"swf",
+
+			upMediaUrl:"upload.php",
+			upMediaExt:"wmv,avi,wma,mp3,mid"
+		});
+	}
+	function insertUpload(arrMsg)
+	{console.log(arrMsg)
+		var i,msg;
+		for(i=0;i<arrMsg.length;i++)
+		{
+			msg=arrMsg[i];
+			$("#uploadList").append('<option value="'+msg.id+'">'+msg.localname+'</option>');
+		}
+	}
+	function submitForm(){$('#frmDemo').submit();}
+	
+	
+// 图片上传
+$('.fileupload').change(function(event) {
+    if ($('.fileupload').val().length) {
+        var fileName = $('.fileupload').val();
+        var extension = fileName.substring(fileName.lastIndexOf('.'), fileName.length).toLowerCase();
+        if (extension == ".jpg" || extension == ".png") {
+          var data = new FormData();
+          data.append('fulAvatar', $('#fileToUpload')[0].files[0]);
+          $.ajax({
+              url: 'http://localhost:3000/pro/api/uploadImg',
+              type: 'POST',
+              data: data,
+              cache: false,
+              contentType: false, //不可缺参数
+              processData: false, //不可缺参数
+              success: function(data) {
+                  console.log('-------upload img:', data);
+                  $('#proimg').html(data.result);
+                  $('.img').html('<img src="../admin/public'+data.result+'" width="40px"/>')
+              },
+              error: function() {
+                  console.log('error');
+              }
+          });
+        }
+    }
+});
+</script>
+
+</html>
