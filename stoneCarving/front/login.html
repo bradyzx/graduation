@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="keywords" content="" />
+		<meta name="description" content="" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/normalize.css"/>
+		<link rel="stylesheet" type="text/css" href="css/login.css"/>
+		<style type="text/css">
+			.footer{background: #1F1F1F;color: #777;height: 100px;padding-top: 0;margin-top: 40px;position: relative;bottom: 0;}
+			.zhizuo{text-align: center;line-height: 100px;margin-bottom: 0;}
+		</style>
+	</head>
+	<body>
+		<!--头部-->
+		<div class="head">
+			<div class="wrap clear">
+				<div class="login_logo left">
+					<a href="index.html">
+						<img src="img/logo.png"/>
+					</a>
+				</div>
+				<div class="login_right right">
+					<a href="index.html">返回首页</a> | 
+					<a href="#">帮助中心</a>
+				</div>
+			</div>
+		</div>
+		<!--中间-->
+		<div class="center">
+			<div class="content clear">
+				<div class="login_form right">
+					<!--登录头部-->
+					<div class="login_select">
+						<ul class="switch_type clear">
+							<li class="switch_mobile red_bottom">快捷登录/注册</li>
+							<li class="switch_weixin">微信登录</li>
+							<li class="switch_acount last">账户登录</li>
+							<li class="switch_app last">手机扫码，安全登录</li>
+						</ul>
+					</div>
+					<!--登录中间-->
+					<div style="width: 306px; overflow: hidden;">
+						<div class="login_type clear">
+							<!--微信登录-->
+							<div class="login_weixin left">
+								<div class="weixin_pic">
+									<img src="https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=gQHz8DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyUnV6MEVpWndiM2UxQVJBVTFxMXUAAgQ1wbVaAwQAowIA" width="174" height="174"/>
+								</div>
+								<p style="margin-top: 5px;">微信扫一扫，快速登录</p>
+							</div>
+							<!--账号密码登录-->
+							<div class="login_pwd left">
+								<div class="erro_data">
+									<i style="display: none;"></i>
+									<span></span>
+								</div>
+								<form action="php/login.php" method="post">
+									<div class="input_name">
+										<label for="usernam" class="i-user"></label>
+										<input type="text" name="username" id="username"/>
+										<p>用户名/手机</p>
+									</div>
+									<div class="input_password">
+										<label for="password" class="i-pwd"></label>
+										<input type="password" name="password" id="password"/>
+										<p>密码</p>
+									</div>
+									<div class="forgetpwd">
+										<a href="#">忘记密码?</a>
+									</div>
+									<!--<button class="button" type="submit">登录</button>-->
+									<input type="button" name="submit" id="login" value="登录" class="button"/>
+								</form>
+								<div class="back">
+									<a href="javascript:;">返回快捷登录>></a>
+								</div>
+							</div>
+							<!--快速登录  -------手机登录-->
+							<div class="login_mobile left">
+								<div class="erro_data">
+									<i style="display: none;"></i>
+									<span></span>
+								</div>
+								<div class="input-mobile">
+									<label for="usernam" class="i-phone"></label>
+									<input type="text" name="username" />
+									<p>手机号</p>
+								</div>
+								<div class="input-mobile-yzm">
+									<label for="password" class="i-pwd"></label>
+									<input type="password" name="password"/>
+									<p>短信验证码</p>
+									<div>获取短信验证码</div>
+								</div>
+								<button class="button-mobile">登录/注册</button>
+							</div>
+							<!--app登录-->
+							<div class="login_weixin left">
+								<div class="weixin_pic">
+									<img src="https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=gQHz8DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyUnV6MEVpWndiM2UxQVJBVTFxMXUAAgQ1wbVaAwQAowIA" width="174" height="174"/>
+								</div>
+								<p style="margin-top: 5px;">app扫一扫，安全登录</p>
+							</div>
+						</div>
+					</div>
+					<!--登录底部-->
+					<div class="other_login clear">
+						<a href="javascript:;" class="i-app">
+							<i></i>
+							<span>扫码登录</span>
+						</a>
+						<a href="javascript:;" class="i-account">
+							<i></i>
+							<span>账号登录</span>
+						</a>
+						<a href="javascript:;" class="i-qq">
+							<i></i>
+							<span>QQ登录</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--底部内容-->
+		<div class="footer">
+			<div class="wrap zhizuo">
+				制作人：浙江树人大学--计算机科学与技术--143班--肖海杰
+			</div>
+		</div>
+		
+		<script src="js/jquery-1.11.3.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/login.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$('.i-account').click();
+		</script>
+	</body>
+</html>

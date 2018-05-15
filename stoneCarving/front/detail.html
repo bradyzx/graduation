@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>详情页</title>
+		<link rel="stylesheet" type="text/css" href="css/normalize.css"/>
+		<link rel="stylesheet" type="text/css" href="css/detail.css"/>
+		<style type="text/css">
+			.kucun{
+				margin-top: 8px;
+			}
+			.sc{cursor: pointer;}
+			.top_right li:hover a{color:#E62318}
+			.footer{background: #1F1F1F;color: #777;height: 100px;padding-top: 0;margin-top: 40px;position: relative;bottom: 0;}
+			.zhizuo{text-align: center;line-height: 100px;margin-bottom: 0;}
+			.info{margin-top: 120px;}
+			.info_list{margin-top: 20px;}
+			.com{margin-top: 100px;}
+			.com_list{margin-top: 20px;padding-bottom:10px;border-bottom: 1px dashed #DCDCDC;}
+			.comuser{text-indent: 1em;}
+			.cominfo{text-indent:6em;margin-top: 10px;}
+			.reply{margin-top: 10px;}
+			.reply>span{text-indent: 20px;}
+			.replyinfo{display: inline-block;}
+		</style>
+	</head>
+	<body>
+		<!--头部到导航-->
+		<div class="header">
+			<!--顶部-->
+			<div class="top">
+				<div class="wrap">
+					<ul class="top_left">
+						<li style="display: block;" class="nouser">
+							<a href="login.html" ><span class="text">请登录</span></a>
+							<a href="register.html" ><span class="text">免费注册</span></a>
+						</li>
+						<li style="display: none;" class="showuser">
+							欢迎：<span class="user">用户</span>
+							<a href="javascript:;" ><span class="text loginout">退出登录</span></a>
+						</li>
+					</ul>
+					<ul class="top_right">
+						<li>
+							<a href="dingdan.html" class="mymll">
+								<span class="text">我的订单</span>
+							</a>
+						</li>
+						<li>
+							<i class="icon"></i>
+							<a href="cart.html">
+								<span class="text">
+									购物车
+									<strong class="strongNum">0</strong>
+								</span>
+							</a>
+						</li>
+						<li>
+							<a href="shoucang.html">
+								<span class="text">
+									我的收藏
+								</span>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;" class="grzx">
+								<span class="text">
+									个人中心
+								</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!--logo和搜索框-->
+			<div class="loge_search">
+				<div class="wrap">
+					<div class="logo">
+						<img src="img/logo.png"/>
+					</div>
+					<!--<div class="search">
+						<form action="" method="post">
+							<input type="text" name="" value="搜索石雕>>>" />
+							<input type="button" value="搜索"/>
+						</form>
+					</div>-->
+				</div>
+			</div>
+			<!--导航栏-->
+			<div class="nav">
+				<div class="wrap clear">
+					
+					<ul class="navigator">
+						<li>
+							<a href="index.html" style="color: #333333;">首页</a>
+						</li>
+						<li>
+							<a href="sdsz.html" style="color: #333333;">石雕狮子</a>
+						</li>
+						<li>
+							<a href="dfrw.html" >东方人物</a>
+						</li>
+						<li>
+							<a href="sdpl.html">石雕牌楼</a>
+						</li>
+						<li>
+							<a href="bytj.html">
+								本月推荐
+								<img src="img/hot.gif"/>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!--中间详情内容-->
+		<div class="detail_main">
+			<!--上面导航一行-->
+			<div class="cart_link_bg">
+			</div>
+			<!--物品-->
+			<div class="wrap clear" style="margin-top: -20px;">
+				<div class="goods_display left">
+					<div class="slide">
+						<div class="smallpic">
+							<img src="" width="470px" height="313px" sid=""/>
+							<!--<div class="xf"></div>-->
+						</div>
+						<!--<div class="big">
+							<img class="bigpic" src="http://www.chinaqysd.com/admin/goodsphoto/xpic/2701_db_600_600.jpg" />
+						</div>-->
+						<!--<div class="thumb">
+							<div class="table">
+								<ul class="clear">
+									<li class="album_item">
+										<a href="javascript:;">
+											<img src="http://www.chinaqysd.com/admin/goodsphoto/xpic/2701_db_600_600.jpg" width="95px" height="65px"/>
+											<span class="spanbor current"></span>
+										</a>
+									</li>
+									
+								</ul>
+							</div>
+						</div>-->
+					</div>
+					<ul class="extra clear">
+						<li></li>
+					</ul>
+				</div>
+				<!--购买详情-->
+				<div class="goods_info left">
+					<div class="title">
+						<h4 class="main-title">精雕石雕狮子</h4>
+					</div>
+					<ul class="price">
+						<li class="price-att1">
+							<table style="width:100%"><tbody><tr>
+									<td class="tit"><span>促销价</span></td>
+									<td>
+										<strong class="yen">¥</strong><strong class="gnum">3199.00</strong>
+										<span class="shop-price">本站价&nbsp;:&nbsp;<del class="mt">¥3999.00</del></span>					
+									</td>
+									<td class="sale-num">
+										<span class="line"></span>
+										<!--<p>
+											<a href="javascript:;" class="mt JS_jump">已售 <span style="color: orange;">167</span></a><br>
+											<a href="javascript:;" class="mt JS_jump">评价 <span class="blue">1</span></a>
+										</p>-->
+									</td>
+								</tr>
+											</tbody></table>
+						</li>
+						<li class="cart-act-info" >
+						</li>
+						<li class="act-block" style="display: list-item;">
+							<div class="act-block-in">
+								<table >
+									<tbody>
+										<tr>
+											<td class="tit"><span>促销</span></td>
+											<td colspan="2"><span class="label">直降</span>已优惠<span class="desc">800</span>元</td>
+											<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;点击右侧按钮收藏-------->>>
+												<div class="label sc">收藏</div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</li>
+					</ul>
+					<dl class="buynum">
+						<dt class="left">数量</dt>
+						<dd>
+							<div class="input">
+								<input type="text" name="goodsnum" id="count" value="1" class="goodsnum"/>
+								<div class="click">
+									<a href="javascript:;" class="add"></a>
+									<a href="javascript:;" class="minus"></a>
+								</div>
+							</div>
+							&nbsp;&nbsp;库存 <span class="kucun">254</span>
+						</dd>
+					</dl>
+					<dl class="buynum">
+						<dt class="left">石雕材质：</dt>
+						<dd>
+							<div class="sdcz" style="padding-top: 5px;">
+								<select name="caizhi" class="caizhi">
+									<option value="">请选择</option>
+									<option value="hby">汉白玉</option>
+									<option value="xhb">雪花白</option>
+									<option value="wxh">晚霞红</option>
+								</select>
+							</div>
+						</dd>
+					</dl>
+					<div class="joincart_btn clear">
+						<a href="javascript:;" class="left btn02"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!--商品详情-->
+		<div class="info wrap">
+			<p><h3>商品介绍:</h3></p>
+			<div class="info_list">
+				<p><span style="color: rgb(51, 51, 51); font-family: arial, 宋体, sans-serif; font-size: 14px; text-indent: 28px;">鲁迅一生在文学创作、文学批评、思想研究、文学史研究、翻译、美术理论引进、基础科学介绍和古籍校勘与研究等多个领域具有重大贡献。他对于五四运动以后的中国社会思想文化发展具有重大影响，蜚声世界文坛，尤其在韩国、日本思想文化领域有极其重要的地位和影响，被誉为“二十世纪东亚文化地图上占最大领土的作家”。</span><br /></p>
+				<p><span style="color: rgb(51, 51, 51); font-family: arial, 宋体, sans-serif; font-size: 14px; text-indent: 28px;">该石雕置于图书馆等文学建筑前是一个不错的选择。</span></p>
+			</div>
+		</div>
+		<!--评价列表-->
+		<div class="com wrap">
+			<h3>全部评价:</h3>
+			<div class="allcom"></div>
+			<!--<div class="com_list">
+				<div class="comuser"><span>用户1：</span><span>2018/5/6 下午1:02:22</span></div>
+				<div class="cominfo">物流是真的皮</div>
+				<div class="reply">
+					<span>商家回复：</span>
+					<div class="replyinfo">皮一下就很开心</div>
+				</div>
+			</div>-->
+		</div>
+		<!--底部内容-->
+		<div class="footer">
+			<div class="wrap zhizuo">
+				制作人：浙江树人大学--计算机科学与技术--143班--肖海杰
+			</div>
+		</div>
+		
+		
+		<script src="js/jquery-1.11.3.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/detail.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			//判断是否存在用户
+			if($.cookie('username') && $.cookie('username')!='null'){
+				$('.showuser').show();
+				$('.nouser').hide();
+				$('.user').html($.cookie('username'));
+			}else{
+				$('.showuser').hide();
+				$('.nouser').show();
+			}
+			//退出登录
+			$('.loginout').on('click',function () {
+				$.cookie('username', null);
+				location.reload();
+			});
+			//顶部购物车的数量
+			function cartNum () {
+				$.ajax({
+					type:"post",
+					url:"http://localhost:3001/cart/list",
+					async:true,
+					data:{
+						username:$.cookie('username')
+					}
+				}).then(function (res) {
+					var cartnum = 0;
+					for (var i=0;i<res.docs.length;i++) {
+						cartnum += res.docs[i].num
+					}
+					$('.text').find('strong').html(cartnum);
+				});
+			}
+			if($.cookie('username') && $.cookie('username')!='null'){
+				cartNum();
+			}
+			
+			//获取sid
+			function getUrlParam(name) {
+			    var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+			    var r = window.location.search.substr(1).match(reg); //匹配目标参数
+		      	if (r != null) return unescape(r[2]); return null; //返回参数值
+		    }
+			var sid = getUrlParam('sid');
+			//商品显示出来
+			showPro(sid);
+			function showPro (sid) {
+				$('.smallpic img').attr('sid',sid);
+				$.ajax({
+					type:"post",
+					url:"http://localhost:3000/pro/list",
+					async:true,
+					data:{
+						sid:sid
+					}
+				}).then(function (res) {
+					$('.smallpic').find('img').attr('src','http://127.0.0.1:8020/stoneCarvingSystem/admin/public'+res.rows[0].proimg);
+					$('.main-title').html(res.rows[0].proname);
+					$('.gnum').html(parseFloat(res.rows[0].prosale).toFixed(2));
+					$('.mt').html('¥'+parseFloat(res.rows[0].proprice).toFixed(2));
+					$('.main-title').html(res.rows[0].proname);
+					$('.desc').html(res.rows[0].proprice - res.rows[0].prosale);
+					$('.kucun').html(res.rows[0].pronum);
+					$('.info_list').html(res.rows[0].propress);
+					//检查是否已经收藏
+					shoucang ();
+				});
+			}
+			
+			
+			var num = 0;
+			$('.joincart_btn').on('click',function () {
+				var caizhi = '';
+				console.log($('.caizhi').val());
+				if($('.caizhi').val()=='hby'){
+					caizhi="汉白玉"		
+				}
+				if($('.caizhi').val()=='xhb'){
+					caizhi="雪花白"		
+				}
+				if($('.caizhi').val()=='wxh'){
+					caizhi="晚霞红"		
+				}
+				if($.cookie('username') && $.cookie('username')!='null'){
+					if($('.caizhi').val()==''){
+						alert('请选择好材质后再加入购物车');
+					}else{
+						$.ajax({
+							type:"post",
+							url:"http://localhost:3001/cart/list",
+							async:true,
+							data:{
+								sid:$('.smallpic img').attr("sid"),
+								caizhi:caizhi,
+								username:$.cookie('username')
+							}
+						}).then(function (res) {
+								//判断购物车列表中存在商品，加上数量
+									var len = res.docs;
+									if(len.length>0){
+										num = len[0].num;
+										addCartNum(len[0]._id,num);
+										
+									}else{
+										//添加进购物车表
+										addToCart();
+										cartNum();
+									}
+						});
+					}
+				}else{
+					alert("请先登录");
+				}
+			})
+			//判断购物车列表中存在商品，加上数量
+			function addCartNum (id,num) {
+				num += parseInt($('.goodsnum').val());
+				$.ajax({
+					type:"put",
+					url:"http://localhost:3001/cart/data/"+id,
+					async:true,
+					data:{
+						num:num
+					}
+				}).then(function (res) {
+					console.log('物品已经存在，添加数量成功');
+					cartNum();
+				});
+			}
+			//添加进购物车表
+			function addToCart () {
+				var caizhi = '';
+				console.log($('.caizhi').val());
+				if($('.caizhi').val()=='hby'){
+					caizhi="汉白玉"		
+				}
+				if($('.caizhi').val()=='xhb'){
+					caizhi="雪花白"		
+				}
+				if($('.caizhi').val()=='wxh'){
+					caizhi="晚霞红"		
+				}
+				$.ajax({
+					type:"post",
+					url:"http://localhost:3001/cart/data",
+					async:true,
+					data:{
+						sid:$('.smallpic img').attr("sid"),
+						url:$('.smallpic img').attr("src"),
+						title:$('.main-title').html(),
+						price:parseInt($('.gnum').html().substr(0,4)),
+						num:parseInt($('.goodsnum').val()),
+						username:$.cookie('username'),
+						caizhi:caizhi,
+						state:"待付款"
+					}
+				}).then(function (res) {
+					console.log(res);
+				});
+			}
+			
+			
+			//改变商品数量++
+			$('.add').on('click', function() {
+			    var $count = $(this).parents('.input').find('input').val();//获取当前的数量
+			    $count++;
+			    if ($count >= 99) {
+			        $count = 99;
+			    }
+			    $(this).parents('.input').find('input').val($count);//赋值回去
+			    if($count > $('.kucun').html()){
+			    	alert('购买数量超过库存');
+			    	$(this).parents('.input').find('input').val(1);
+			    	$('.goodsnum').focus();
+			    }
+			});
+			
+			//改变商品数量--
+			$('.minus').on('click', function() {
+			    var $count = $(this).parents('.input').find('input').val();
+			    $count--;
+			    if ($count <= 1) {
+			        $count = 1;
+			    }
+			    $(this).parents('.input').find('input').val($count);//赋值回去
+			});
+			
+			$('.input input').on('input', function() {
+			    var $reg = /^\d+$/g; //只能输入数字
+			    var $value = parseInt($(this).val());
+			    if ($reg.test($value)) {
+			        if ($value >= 99) {//限定范围
+			            $(this).val(99);
+			        } else if ($value <= 0) {
+			            $(this).val(1);
+			        } else {
+			        	if($value > $('.kucun').html()){
+					    	alert('购买数量超过库存');
+					    	$('.goodsnum').focus();
+					    	$(this).val(1);
+					    }else{
+					    	$(this).val($value);
+					    }
+			        }
+			    } else {
+			        $(this).val(1);
+			    }
+			});
+			
+				//点击收藏
+			$('.sc').on('click',function () {
+				if($(this).html()=='收藏'){
+					var $that = $(this);
+					if($.cookie('username') && $.cookie('username')!='null'){
+						//console.log($.cookie('username'));
+						$.ajax({
+							type:"post",
+							url:"http://localhost:3000/shoucang/data",
+							async:true,
+							data:{
+								proname:$('.main-title').html(),
+								username:$.cookie('username'),
+								prourl:$('.smallpic').find('img').attr('src'),
+								sid:$('.smallpic').find('img').attr('sid')
+							}
+						}).then(function () {
+							$that.html('已收藏');
+						});
+					}else{
+						alert('请先登录，再进行收藏！');
+					}
+				}else{
+					alert('该商品已收藏');
+				}
+			});
+			/*收藏*/
+			function shoucang () {
+				$.ajax({
+						type:"post",
+						url:"http://localhost:3000/shoucang/list",
+						async:true
+					}).then(function (res) {
+						for (var i=0;i<res.rows.length;i++) {
+							if(res.rows[i].username == $.cookie('username') && res.rows[i].proname==$('.main-title').html() && res.rows[i].prourl==$('.smallpic').find('img').attr('src')){
+								$('.sc').html('已收藏');
+							}
+						}
+					});
+			}
+			
+			
+			//全部评价显示
+			function Comment () {
+				$.ajax({
+					type:"post",
+					url:"http://localhost:3000/message/list",
+					async:true
+				}).then(function (res) {
+					console.log(res.rows);
+					var comhtml='';
+					var replayhtml='';
+					for (var i=0;i<res.rows.length;i++) {
+						if(res.rows[i].proname == $('.main-title').html()){
+							if(res.rows[i].reply == 'null'){
+								replayhtml='';
+							}else{
+								replayhtml+=`
+									<div class="reply">
+										<span>商家回复：</span>
+										<div class="replyinfo">${res.rows[i].reply}</div>
+									</div>
+								`;
+							}
+							comhtml+=`
+								<div class="com_list">
+									<div class="comuser"><span>${res.rows[i].username}：</span><span>${res.rows[i].mtime}</span></div>
+									<div class="cominfo">${res.rows[i].mcon}</div>
+									${replayhtml}
+								</div>
+							`;
+						}
+					}
+					$('.allcom').append(comhtml);
+				});
+			}
+			Comment();
+			//跳转个人中心
+			$('.grzx').on('click',function () {
+				if($.cookie('username') && $.cookie('username')!='null'){
+					$(location).attr('href', 'personal.html');
+				}else{
+					alert('请先登录');
+				}
+			});
+		</script>
+		
+	</body>
+</html>

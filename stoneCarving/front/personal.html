@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/normalize.css"/>
+		<link rel="stylesheet" type="text/css" href="css/personal.css"/>
+		<style type="text/css">
+			.footer{background: #1F1F1F;color: #777;height: 100px;padding-top: 0;margin-top: 40px;position: relative;bottom: 0;}
+			.zhizuo{text-align: center;line-height: 100px;margin-bottom: 0;}
+			.tab{font-size: 18px;position: relative;top: 64px;left: 60px;}
+			.tab span{color: #333333;cursor: pointer;}
+			.tab span:nth-of-type(1){color: red;}
+		</style>
+	</head>
+	<body>
+		<!--头部-->
+		<div class="head">
+			<div class="wrap clear">
+				<div class="login_logo left" style="width: 345px;height: 86px;overflow: hidden;">
+					<a href="index.html">
+						<img src="img/logo.png"/>
+					</a>
+				</div>
+				<div class='tab left'><span>个人信息</span>&nbsp;|&nbsp;<span>密码修改</span></div>
+				<div class="login_right right">
+					<a href="index.html">返回首页</a> | 
+					<a href="#">帮助中心</a>
+				</div>
+			</div>
+		</div>
+		<!--中间注册的表单-->
+		<div class="main">
+			<div class="wrap ">
+				<div class="reg clear">
+				<!--注册表单-->
+					<div class="user_reg left myinfo">
+						<form action="" method="post">
+							<div class="formbox">
+								<div class="hang nohang">
+									<label class="tips">
+										<span class="red">*</span>帐户名：
+									</label>
+									<input type="text" name="username" class="username" value="" readonly="readonly"/>
+								</div>
+								<div class="hang">
+									<label class="tips">
+										<span class="red">*</span>手机号码：
+									</label>
+									<input type="text" name="phone" class="phone" value="" />
+									<span class="success"></span>
+									<div class="errorphone error"></div>
+								</div>
+								<div class="hang">
+									<label class="tips">
+										<span class="red">*</span>邮箱：
+									</label>
+									<input type="text" name="email" class="email" value="" />
+									<span class="success"></span>
+									<div class="erroremail error"></div>
+								</div>
+								<div class="reg_submit">
+									<input type="button" value="提交修改" class="btn_reg updateInfo" name="submit"/>
+								</div>
+							</div>
+						</form>
+					</div>
+					<!--密码修改-->
+					<div class="user_reg left pwdupdate" style="display: none;">
+						<form action="" method="post">
+							<div class="formbox">
+								<div class="hang">
+									<label class="tips">
+										<span class="red">*</span>原密码：
+									</label>
+									<input type="password" name="repwd" class="repwd" value="" />
+									<span class="success"></span>
+									<div class="errorpwd2 error"></div>
+								</div>
+								<div class="hang">
+									<label class="tips">
+										<span class="red">*</span>设置密码：
+									</label>
+									<input type="password" name="password" class="password" value="" />
+									<span class="success"></span>
+									<div class="errorpwd error">6-20位，支持字母、数字或符号的组合，不可单独使用字母、数字或符号</div>
+								</div>
+								<div class="hang">
+									<label class="tips">
+										<span class="red">*</span>确认密码：
+									</label>
+									<input type="password" name="repassword" class="repassword" value="" />
+									<span class="success"></span>
+									<div class="errorpwd2 error"></div>
+								</div>
+								<div class="reg_submit">
+									<input type="button" value="提交修改" class="btn_reg updatepwd" name="submit"/>
+								</div>
+							</div>
+						</form>
+					</div>
+					
+					
+					
+				</div>
+			</div>
+		</div>	
+		<!--底部内容-->
+		<div class="footer">
+			<div class="wrap zhizuo">
+				制作人：浙江树人大学--计算机科学与技术--143班--肖海杰
+			</div>
+		</div>
+		
+		<script src="js/jquery-1.11.3.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/personal.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

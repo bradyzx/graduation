@@ -1,0 +1,500 @@
+@charset "UTF-8";
+* {
+  margin: 0px;
+  padding: 0px; }
+
+body {
+  font-family: "微软雅黑";
+  font-size: 12px; }
+
+a {
+  text-decoration: none;
+  color: #333; }
+
+ul, ol {
+  list-style: none; }
+
+img {
+  display: block; }
+
+ol, ul {
+  list-style: none; }
+
+.red {
+  color: #e62318 !important; }
+
+.blue {
+  color: #4a92f5; }
+
+.bold {
+  font-weight: bold; }
+
+i, em, span {
+  display: inline-block; }
+
+.wrap {
+  width: 1190px;
+  margin: 0 auto;
+  position: relative; }
+
+.clear:after {
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden; }
+
+.left {
+  float: left; }
+
+.right {
+  float: right; }
+
+.footer .foot_icon {
+  background: #F8F8F8;
+  padding: 35px 0;
+  border-bottom: 1px solid #ededed;
+  text-align: center;
+  font-size: 0; }
+  .footer .foot_icon a {
+    display: inline-block;
+    width: 170px;
+    height: 80px; }
+    .footer .foot_icon a span {
+      display: inline-block;
+      font-size: 14px;
+      width: 100%;
+      color: #000;
+      text-align: center;
+      margin-top: 10px; }
+    .footer .foot_icon a .icon_1 {
+      background-position: 0 0; }
+    .footer .foot_icon a .icon_2 {
+      background-position: -50px 0; }
+    .footer .foot_icon a .icon_3 {
+      background-position: -100px 0; }
+    .footer .foot_icon a .icon_4 {
+      background-position: -150px 0px; }
+    .footer .foot_icon a .icon_5 {
+      background-position: 0px -50px; }
+    .footer .foot_icon a .icon_6 {
+      background-position: -50px -50px; }
+    .footer .foot_icon a .icon_7 {
+      background-position: -100px -50px; }
+  .footer .foot_icon i {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+    background: url(../img/footer.png) no-repeat; }
+
+.footer .foot_help {
+  background: #F8F8F8;
+  padding: 35px 0 54px; }
+  .footer .foot_help .summary {
+    width: 240px;
+    height: 165px;
+    float: left;
+    background: url(../img/footer.png) 0 -100px no-repeat; }
+    .footer .foot_help .summary li {
+      font-size: 12px; }
+    .footer .foot_help .summary .s1 {
+      font-size: 14px;
+      line-height: 19px; }
+    .footer .foot_help .summary .s2 {
+      font-size: 20px;
+      color: #E62318;
+      margin: 5px 0; }
+    .footer .foot_help .summary .s3 {
+      color: #999999;
+      margin-bottom: 30px; }
+    .footer .foot_help .summary .s4 {
+      margin-bottom: 10px; }
+      .footer .foot_help .summary .s4 a {
+        display: inline-block;
+        color: #E62318;
+        border: 1px solid #e62318;
+        width: 106px;
+        height: 24px;
+        line-height: 24px;
+        text-align: center;
+        padding-left: 10px;
+        position: relative; }
+      .footer .foot_help .summary .s4 .coord {
+        display: inline-block;
+        width: 11px;
+        height: 14px;
+        background: url(../img/footer.png) -11px -265px no-repeat;
+        position: absolute;
+        top: 5px;
+        left: 5px; }
+    .footer .foot_help .summary .s5 a {
+      display: inline-block;
+      color: #E62318;
+      border: 1px solid #e62318;
+      width: 106px;
+      height: 24px;
+      line-height: 24px;
+      text-align: center;
+      padding-left: 10px;
+      position: relative; }
+    .footer .foot_help .summary .s5 .mobile {
+      display: inline-block;
+      width: 10px;
+      height: 13px;
+      background: url(../img/footer.png) 0 -265px no-repeat;
+      position: absolute;
+      top: 6px;
+      left: 6px; }
+  .footer .foot_help .article {
+    width: 851px;
+    float: right; }
+    .footer .foot_help .article dl {
+      float: left;
+      width: 151px; }
+      .footer .foot_help .article dl dt {
+        color: #444;
+        font-size: 14px;
+        padding: 3px 0 5px;
+        margin-bottom: 6px; }
+      .footer .foot_help .article dl a {
+        display: block;
+        color: #999999;
+        margin-top: 9px;
+        font-size: 12px; }
+    .footer .foot_help .article img {
+      width: 96px;
+      height: 96px; }
+    .footer .foot_help .article .vchat {
+      width: 96px; }
+
+.footer .foot_extend {
+  background: #1f1f1f;
+  padding: 21px 0 30px; }
+  .footer .foot_extend span {
+    margin-right: 10px; }
+  .footer .foot_extend .foot_link {
+    border-bottom: solid 1px #2e2e2e;
+    padding-bottom: 20px;
+    margin-bottom: 20px; }
+    .footer .foot_extend .foot_link li {
+      height: 20px;
+      overflow: hidden;
+      color: #777;
+      position: relative; }
+    .footer .foot_extend .foot_link .switch {
+      height: 20px;
+      line-height: 20px;
+      padding-right: 15px;
+      font-size: 0px; }
+      .footer .foot_extend .foot_link .switch span {
+        font-size: 12px; }
+      .footer .foot_extend .foot_link .switch a {
+        font-size: 12px;
+        color: #777;
+        margin-right: 20px; }
+    .footer .foot_extend .foot_link i {
+      position: absolute;
+      top: 3px;
+      right: 0px;
+      width: 15px;
+      height: 13px;
+      background: url(../img/footer.png) -23px -265px no-repeat; }
+  .footer .foot_extend .foot_bot {
+    position: relative; }
+    .footer .foot_extend .foot_bot a {
+      color: #777; }
+    .footer .foot_extend .foot_bot ul {
+      color: #777;
+      height: 40px;
+      font-size: 12px; }
+      .footer .foot_extend .foot_bot ul li {
+        height: 20px;
+        line-height: 20px; }
+    .footer .foot_extend .foot_bot .credit {
+      position: absolute;
+      right: 0;
+      top: 0; }
+      .footer .foot_extend .foot_bot .credit li {
+        display: inline-block;
+        height: 40px;
+        float: left;
+        padding-left: 15px; }
+        .footer .foot_extend .foot_bot .credit li span {
+          line-height: 20px;
+          width: 50px;
+          height: 40px;
+          vertical-align: top;
+          margin-right: 0; }
+      .footer .foot_extend .foot_bot .credit i {
+        width: 27px;
+        margin-right: 5px;
+        background-image: url(../img/credit.png); }
+      .footer .foot_extend .foot_bot .credit .spec span {
+        line-height: 40px;
+        vertical-align: top;
+        margin-right: 0; }
+    .footer .foot_extend .foot_bot .icon_01 {
+      background-position: 0 0;
+      height: 22px;
+      margin-top: 12px; }
+    .footer .foot_extend .foot_bot .icon_03 {
+      background-position: 0 -47px;
+      height: 21px;
+      margin-top: 11px; }
+    .footer .foot_extend .foot_bot .icon_04 {
+      background-position: 0 -22px;
+      height: 25px;
+      margin-top: 9px; }
+
+.head {
+  position: relative;
+  padding: 15px 0; }
+
+.login_right {
+  width: 180px;
+  padding-top: 40px;
+  text-align: right; }
+  .login_right a {
+    color: #333333; }
+
+.center {
+  background: #cf000e;
+  padding: 72px 0;
+  min-width: 1190px; }
+
+.content {
+  margin: 0 auto;
+  width: 1070px;
+  position: relative; }
+
+.login_select {
+  overflow: hidden;
+  width: 306px; }
+
+.login_form {
+  position: relative;
+  background: #FFFFFF;
+  padding: 25px 27px;
+  overflow: hidden; }
+
+.login_weixin {
+  text-align: center;
+  position: relative;
+  top: 0;
+  left: 0;
+  padding: 55px 0 8px 0;
+  width: 306px; }
+  .login_weixin img {
+    display: inline-block; }
+
+.login_pwd {
+  width: 306px;
+  position: relative; }
+  .login_pwd .erro_data {
+    margin: 0 0 5px 0;
+    color: #cf000e;
+    min-height: 23px;
+    line-height: 16px;
+    padding: 0 8px;
+    border: 1px solid #FFFFFF; }
+  .login_pwd .input_name {
+    position: relative;
+    height: 40px;
+    border: 1px solid #ddd;
+    line-height: 40px;
+    margin-bottom: 25px; }
+    .login_pwd .input_name input {
+      width: 254px;
+      height: 40px;
+      border: 0;
+      outline: 0;
+      display: none; }
+    .login_pwd .input_name .i-user {
+      float: left;
+      width: 19px;
+      height: 19px;
+      background: url(../img/allPuzzle.png) 0 -30px no-repeat;
+      margin: 10px 16px 10px 11px; }
+    .login_pwd .input_name p {
+      position: absolute;
+      top: 0px;
+      left: 45px;
+      color: #b2b2b2; }
+  .login_pwd .input_password {
+    position: relative;
+    height: 40px;
+    border: 1px solid #ddd;
+    line-height: 40px; }
+    .login_pwd .input_password input {
+      width: 254px;
+      height: 40px;
+      border: 0;
+      outline: 0;
+      display: none; }
+    .login_pwd .input_password .i-pwd {
+      float: left;
+      width: 19px;
+      height: 19px;
+      background: url(../img/allPuzzle.png) -21px -30px no-repeat;
+      margin: 10px 16px 10px 11px; }
+    .login_pwd .input_password p {
+      position: absolute;
+      top: 0px;
+      left: 45px;
+      color: #b2b2b2; }
+  .login_pwd .forgetpwd {
+    text-align: right;
+    margin: 10px 0; }
+    .login_pwd .forgetpwd a {
+      color: #666666; }
+  .login_pwd .button {
+    width: 306px;
+    height: 42px;
+    background: #cf000e;
+    outline: 0;
+    border: 0;
+    border-radius: 3px;
+    color: #FFFFFF;
+    line-height: 42px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    margin: 24px 0;
+    cursor: pointer; }
+  .login_pwd .back {
+    text-align: right; }
+    .login_pwd .back a {
+      color: #666666; }
+
+.login_type {
+  width: 1224px;
+  overflow: hidden;
+  position: relative;
+  left: -612px; }
+  .login_type .login_mobile {
+    width: 306px; }
+    .login_type .login_mobile .erro_data {
+      margin: 0px;
+      color: #cf000e;
+      min-height: 23px;
+      line-height: 16px;
+      padding: 0 8px;
+      border: 1px solid #fff; }
+    .login_type .login_mobile .input-mobile, .login_type .login_mobile .input-mobile-yzm {
+      position: relative;
+      height: 40px;
+      border: 1px solid #ddd;
+      overflow: hidden;
+      line-height: 40px;
+      margin-bottom: 25px;
+      color: #B2B2B2; }
+      .login_type .login_mobile .input-mobile input, .login_type .login_mobile .input-mobile-yzm input {
+        display: none; }
+    .login_type .login_mobile input {
+      float: left;
+      height: 20px;
+      font-size: 13px;
+      width: 254px;
+      border: 0 none;
+      padding: 10px 0;
+      margin: 0;
+      font-family: '微软雅黑'; }
+    .login_type .login_mobile p {
+      position: absolute;
+      left: 50px;
+      top: 0; }
+    .login_type .login_mobile .i-phone {
+      float: left;
+      width: 19px;
+      height: 20px;
+      background: url(../img/allPuzzle.png) -63px -30px no-repeat;
+      margin: 10px 16px 10px 11px; }
+    .login_type .login_mobile .i-pwd {
+      float: left;
+      width: 19px;
+      height: 19px;
+      background: url(../img/allPuzzle.png) -21px -30px no-repeat;
+      margin: 10px 16px 10px 11px; }
+    .login_type .login_mobile .input-mobile-yzm div {
+      position: absolute;
+      right: 15px;
+      top: 0;
+      background: #f0f0f0;
+      color: #333;
+      height: 28px;
+      width: 104px;
+      text-align: center;
+      line-height: 28px;
+      border-radius: 3px;
+      margin-top: 6px;
+      cursor: pointer; }
+    .login_type .login_mobile .button-mobile {
+      margin-top: 28px;
+      width: 306px;
+      height: 42px;
+      line-height: 42px;
+      background-color: #cf000e;
+      text-align: center;
+      font-size: 16px;
+      font-weight: bold;
+      color: #fff;
+      border-radius: 3px;
+      border: 0;
+      outline: 0;
+      cursor: pointer; }
+
+.switch_type {
+  position: relative;
+  font-size: 16px;
+  left: 0;
+  font-weight: bold;
+  color: #888;
+  width: 924px;
+  border-bottom: 1px solid #bbbbbb; }
+  .switch_type li {
+    float: left;
+    position: relative;
+    width: 154px;
+    text-align: center;
+    padding: 13px 0 14px 0;
+    cursor: pointer; }
+  .switch_type .red_bottom {
+    margin-bottom: -1px;
+    color: #cf000e;
+    border-bottom: 2px solid #cf000e; }
+  .switch_type .switch_acount, .switch_type .switch_app {
+    width: 308px;
+    color: #333;
+    margin-bottom: -1px;
+    text-align: left;
+    width: 308px; }
+
+.other_login {
+  margin: 30px 0 15px;
+  vertical-align: bottom; }
+  .other_login a {
+    float: left;
+    display: block; }
+    .other_login a span {
+      vertical-align: middle;
+      display: inline-block;
+      line-height: 28px;
+      color: #999; }
+  .other_login .i-app, .other_login .i-account, .other_login .i-qq {
+    width: 87px;
+    margin-right: 10px;
+    height: 28px; }
+  .other_login i {
+    vertical-align: middle;
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    margin-right: 6px;
+    background: url(../img/allPuzzle.png) no-repeat; }
+  .other_login .i-app i {
+    background-position: -73px -80px; }
+  .other_login .i-account i {
+    background-position: -73px -52px; }
+  .other_login .i-qq i {
+    background-position: -73px -108px; }

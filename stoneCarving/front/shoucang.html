@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>我的收藏页面</title>
+		<link rel="stylesheet" type="text/css" href="css/normalize.css"/>
+		<link rel="stylesheet" type="text/css" href="css/cart.css"/>
+		<style type="text/css">
+			.deletepic{
+				height:17px;width:1px;padding-left:17px;overflow:hidden;vertical-align:middle;font-size:0px;display:inline-block;visibility:visible;background:url(img/delete.png) no-repeat -239px -176px;
+			}
+			.ddcontent .dingdanlist td{
+				width: 10%;
+				border: 1px solid #ececec;
+			}
+			.ddcontent .dingdanlist td:nth-of-type(1){width: 30%;}
+			.top_dd>table>tbody{
+				background: #f1f1f1;
+			}
+			table{
+				width: 100%;
+			}
+			.top_dd th:nth-of-type(1){width:30%}
+			.top_dd th{
+				width: 10%;
+				height: 50px;
+			}
+			.proinfo{margin-top: 10px;margin-left: 36px;}
+			.proinfo p:nth-of-type(1){font-size: 16px;margin-left: 20px;margin-top: 20px;}
+			.propic{margin-left: 180px;}
+			.comment{
+				border: 1px solid #dcdcdc;
+			    box-sizing: border-box;
+			    display: inline-block;
+			    height: 28px;
+			    line-height: 26px;
+			    padding: 0 12px;
+			    border-radius: 3px;
+			    font-size: 12px;
+			    cursor: pointer;
+		    }
+		    .comment:hover{color: red;border: 1px solid red;}
+		    .productorder{margin-bottom: 20px;}
+		    .daishou,.yishou{border: 1px solid #dcdcdc;height: 28px;line-height: 26px; padding: 0 12px; font-size: 12px; border-radius: 3px;cursor: pointer;margin-left: 20px;}
+		    .daishou,.yishou{background: #F1F1F1;}
+		    .top_right li:hover a{color:#E62318}
+		    .footer{background: #1F1F1F;color: #777;height: 100px;padding-top: 0;margin-top: 40px;position: relative;bottom: 0;}
+			.zhizuo{text-align: center;line-height: 100px;margin-bottom: 0;}
+		</style>
+	</head>
+	<body>
+		<!--头部-->
+		<div class="cart_head" style="margin-top: -20px;">
+			<div class="top">
+				<div class="wrap">
+					<ul class="top_left">
+						<li style="display: block;" class="nouser">
+							<a href="login.html" ><span class="text">请登录</span></a>
+							<a href="register.html" ><span class="text">免费注册</span></a>
+						</li>
+						<li style="display: none;" class="showuser">
+							欢迎：<span class="user">用户</span>
+							<a href="javascript:;" ><span class="text loginout">退出登录</span></a>
+						</li>
+					</ul>
+					<ul class="top_right">
+						<li>
+							<a href="dingdan.html" class="mymll">
+								<span class="text">我的订单</span>
+							</a>
+						</li>
+						<li>
+							<i class="icon"></i>
+							<a href="cart.html">
+								<span class="text">
+									购物车
+									<strong class="strongNum">0</strong>
+								</span>
+							</a>
+						</li>
+						<li>
+							<a href="shoucang.html">
+								<span class="text">
+									我的收藏
+								</span>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;" class="grzx">
+								<span class="text">
+									个人中心
+								</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!--logo行-->
+		<div class="loge_search">
+			<div class="wrap clear">
+				<div class="logo">
+					<a href="index.html"><img src="img/logo.png"/></a>
+				</div>
+				<!--<div class="step"></div>-->
+			</div>
+		</div>
+		<!--我的订单-->
+		<div class="wrap">
+			<div class="flow_h2 clear">
+				<div class="left mycart_text">我的收藏</div>
+			</div>
+		</div>
+		<!--表格头部-->
+		<div class="wrap top_dd">
+			<table border="0" cellspacing="" cellpadding="">
+				<tbody>
+					<th>商品</th>
+					<th></th>
+					<th>操作</th>
+				</tbody>
+			</table>
+		</div>
+		<!--订单显示的表格-->
+		<div class="ddcontent wrap">
+			<div class="productorder" style="display: none;">
+				<table border="0" cellspacing="" cellpadding="">
+					<tbody class="dingdanlist">
+						<tr>
+							<td class="clear" align="center">
+								<div class="left propic">
+									<img src="img/vchat.jpg" alt="" width="80px" height="80px"/>
+								</div>
+								<div class="left proinfo">
+									<p>石雕狮子</p>
+								</div>
+							</td>
+							<td align="center">
+								<div>
+									<p>已收藏</p>
+								</div>
+							</td>
+							<td align="center">
+								<div>
+									<p class="comment">取消收藏</p>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<!--底部内容-->
+		<div class="footer">
+			<div class="wrap zhizuo">
+				制作人：浙江树人大学--计算机科学与技术--143班--肖海杰
+			</div>
+		</div>
+	</body>
+	
+	<script src="js/jquery-1.11.3.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/dingdan.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		//判断是否存在用户
+			if($.cookie('username') && $.cookie('username')!='null'){
+				$('.showuser').show();
+				$('.nouser').hide();
+				$('.user').html($.cookie('username'));
+			}else{
+				$('.showuser').hide();
+				$('.nouser').show();
+			}
+			//退出登录
+			$('.loginout').on('click',function () {
+				$.cookie('username', null);
+				location.reload();
+			});
+		//顶部购物车的数量
+			function cartNum () {
+				$.ajax({
+					type:"post",
+					url:"http://localhost:3001/cart/list",
+					async:true,
+					data:{
+						username:$.cookie('username')
+					}
+				}).then(function (res) {
+					var cartnum = 0;
+					for (var i=0;i<res.docs.length;i++) {
+						cartnum += res.docs[i].num
+					}
+					$('.text strong').html(cartnum);
+				});
+			}
+			//如果用户已经登录
+			if($.cookie('username') && $.cookie('username')!='null'){
+				cartNum();
+				shoucangShow ();
+			}
+			
+		//我的收藏页面显示
+		function shoucangShow () {
+			$.ajax({
+				type:"post",
+				url:"http://localhost:3000/shoucang/list",
+				async:true,
+				data:{
+					username:$.cookie('username')
+				}
+			}).then(function (res) {
+				var html='';
+				for (var i=0;i<res.rows.length;i++) {
+					html+=`
+						<div class="productorder">
+							<table border="0" cellspacing="" cellpadding="">
+								<tbody class="dingdanlist">
+									<tr>
+										<td class="clear" align="center">
+											<div class="left propic">
+												<a href="detail.html?sid=${res.rows[i].sid}">
+													<img src="${res.rows[i].prourl}" alt="" width="80px" height="80px" sid="${res.rows[i].sid}"/>
+												</a>
+											</div>
+											<div class="left proinfo">
+												<p>${res.rows[i].proname}</p>
+											</div>
+										</td>
+										<td align="center">
+											<div>
+												<p>已收藏</p>
+											</div>
+										</td>
+										<td align="center">
+											<div>
+												<div class="proid" style="display:none">${res.rows[i]._id}</div>
+												<p class="comment">取消收藏</p>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					`;
+				}
+				$('.ddcontent').append(html);
+				//取消收藏
+				$('.comment').on('click',function () {
+					//console.log($(this).siblings('.proid').html());
+					$.ajax({
+						type:"delete",
+						url:"http://localhost:3000/shoucang/data/"+$(this).siblings('.proid').html(),
+						async:true
+					}).then(function () {
+						$('.productorder').remove();
+						shoucangShow ();
+					});
+				});
+			});
+		}
+		//跳转个人中心
+		$('.grzx').on('click',function () {
+			if($.cookie('username') && $.cookie('username')!='null'){
+				$(location).attr('href', 'personal.html');
+			}else{
+				alert('请先登录');
+			}
+		});
+			
+	</script>
+</html>

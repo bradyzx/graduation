@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>购物车</title>
+		<link rel="stylesheet" type="text/css" href="css/normalize.css"/>
+		<link rel="stylesheet" type="text/css" href="css/cart.css"/>
+		<style type="text/css">
+			html,body{
+				height: 100%;
+			}
+			#jiesuan{
+				background: rgba(00,00,00,0.2); width: 100%;height: 100%;position: absolute;top: 0;left:0;z-index: 100;"
+			}
+			.jiesuan_1{
+				background: #fff;border: solid 1px red;width: 470px;height: 537px;position: absolute;top: 0;left: 0;right: 0;bottom: 0;margin: auto;
+			}
+			.top_right li:hover a{color:#E62318}
+			.footer{background: #1F1F1F;color: #777;height: 100px;padding-top: 0;margin-top: 40px;}
+			.zhizuo{text-align: center;line-height: 100px;margin-bottom: 0;}
+		</style>
+	</head>
+	<body>
+		<!--头部-->
+		<div class="cart_head" style="margin-top: -20px;">
+			<div class="top">
+				<div class="wrap">
+					<ul class="top_left">
+						<li style="display: block;" class="nouser">
+							<a href="login.html" ><span class="text">请登录</span></a>
+							<a href="register.html" ><span class="text">免费注册</span></a>
+						</li>
+						<li style="display: none;" class="showuser">
+							欢迎：<span class="user">用户</span>
+							<a href="javascript:;" ><span class="text loginout">退出登录</span></a>
+						</li>
+					</ul>
+					<ul class="top_right">
+						<li>
+							<a href="dingdan.html" class="mymll">
+								<span class="text">我的订单</span>
+							</a>
+						</li>
+						<li>
+							<i class="icon"></i>
+							<a href="cart.html">
+								<span class="text">
+									购物车
+									<strong>0</strong>
+								</span>
+							</a>
+						</li>
+						<li>
+							<a href="shoucang.html">
+								<span class="text">
+									我的收藏
+								</span>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;" class="grzx">
+								<span class="text">
+									个人中心
+								</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!--logo行-->
+		<div class="loge_search">
+			<div class="wrap clear">
+				<div class="logo">
+					<a href="index.html"><img src="img/logo.png"/></a>
+				</div>
+				<!--<div class="step"></div>-->
+			</div>
+		</div>
+		<!--我的购物车行-->
+		<div class="wrap">
+			<div class="flow_h2 clear">
+				<div class="left mycart_text">我的购物车</div>
+				
+				<a href="#" class="right shoppinglist" style="display: none;">
+					<img src="img/shoppinglist.gif" width="133" height="32"/>
+				</a>
+			</div>
+		</div>
+		<!--购物表单-->
+		<form action="" method="post" id="JS_pre_check_form" target="_self" style="display: none;height: 550px;">
+			<table class="w mt20 cart_table" id="JS_list_table_cb">
+				<tbody>
+					<tr>
+						<th class="first"><input type="checkbox" class="JS_checkall_cb" checked="checked" title="全选"></th>
+						<th style="width:36px" class="lbn l">全选</th>
+						<th style="" colspan="2">商品</th>
+						<th style="width:8%">单价</th>
+						<th style="width:15%">数量</th>
+						<th style="width:8%">折扣</th>
+						<th style="width:8%">金额</th>
+						<th style="width:8%">所选材质</th>
+						<th style="width:10%">操作</th>
+					</tr>
+				</tbody>
+				<tbody class="pt_box">
+					<tr>
+						<td colspan="10" class="pt_name"></td>
+					</tr>
+				</tbody>
+				<!--拼接出来-->
+				<tbody class="pt_box">
+					<tr>
+						<td colspan="10" class="pt_name"></td>
+					</tr>
+				</tbody>
+				<tbody class="cart_extra">
+					<tr>
+						<th class="first rbn"><input type="checkbox" class="JS_checkall_cb" checked="checked" title="全选"></th>
+						<th class="lbn l">全选</th>
+						<th colspan="2" class="lbn l">
+							<a href="javascript:;" class="delete_cart_goods" title="删除选中商品">删除选中商品</a></th>
+						<th colspan="6" class="lbn r">
+							<span class="selected-tip">已选<b class="selected-number f14" id="JS_selected_goods_number">&nbsp;1&nbsp;</b>件商品</span>
+							<span class="color3">商品总价（免运费）</span>
+							<span class="red yen total_price"><span class="f24">¥</span>
+							<span id="JS_after" class="f24">2499</span></span>
+						</th>
+					</tr>
+				</tbody>
+			</table>
+			<div class="cart_button w r" style="margin-top: 20px;">
+				<a href="index.html" class="back" title="继续购物"></a>&ensp;
+				<a title="去结算" href="javascript:;" class="check"></a>
+			</div>
+		</form>
+		<!--购物车没东西时的页面-->
+		<div class="nogoods clear" style="display: none;">
+			<div class="left icon"></div>
+			<div class="left main">
+				<div class="strong">您的购物车中暂时没有商品！或者您还没登录！</div>
+				<div class="search">
+					<form action="">
+						<a href="index.html" class="go_buy" title="马上挑选商品"></a>
+						<span class="f14 gray" style="text-indent: 50px;">或者点击左上角登录</span>
+						<!--<input class="text" name="keywords"><input class="submit" type="button" value="确 定">-->
+					</form>
+				</div>
+			</div>
+		</div>
+		<!--底部内容-->
+		<div class="footer">
+			<div class="wrap zhizuo">
+				制作人：浙江树人大学--计算机科学与技术--143班--肖海杰
+			</div>
+		</div>
+		
+		<!--结算界面框-->
+		<div id="jiesuan" style="display: none;">
+			<div class="jiesuan_1" >
+				<span id="cha" style="position: absolute;top: 10px;right: 10px;cursor: pointer;">X</span>
+				<div class="address">
+					<p>请填写收货信息</p>
+					<label for="">收件人</label><input type="text" name="sjname" value="" class="sjname"/><br />
+					<label for="">手机号</label><input type="text" name="sjphone" value="" class="sjphone"/><br />
+					<label for="">收货地址</label><textarea name="sjaddress" rows="5" cols="20" class="sjaddress"></textarea><br />
+					<label for="">邮政编码</label><input type="text" name="sjcode" value="" class="sjcode"/><br />
+					<label for="">备注</label><textarea name="beizhu" rows="5" cols="20" class="beizhu"></textarea><br />
+				</div>
+				<div class="jiesuan_bot right">
+					总支付金额：<span class="jiesuan_money">111111111111</span>元
+					<div class="jiesuan_btn">
+						<input type="button" id="nopay" value="取消" />
+						<input type="button" name="pay" id="pay" value="提交订单并支付" />
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	
+	<script src="js/jquery-1.11.3.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/cart.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		
+			
+			$('.check').on('click',function () {
+				$('#jiesuan').show();
+				$('.jiesuan_money').html($('#JS_after').html());
+			});
+			$('#nopay').on('click',function () {
+				$('#jiesuan').hide();
+				$('.address input').val('');
+				$('.sjaddress').val('');
+				$('.beizhu').val('');
+			});
+			$('#cha').on('click',function () {
+				$('#jiesuan').hide();
+				$('.address input').val('');
+				$('.sjaddress').val('');
+				$('.beizhu').val('');
+			});
+			//跳转个人中心
+			$('.grzx').on('click',function () {
+				if($.cookie('username') && $.cookie('username')!='null'){
+					$(location).attr('href', 'personal.html');
+				}else{
+					alert('请先登录');
+				}
+			});
+			
+	</script>
+</html>

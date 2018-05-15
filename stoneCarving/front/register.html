@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/normalize.css"/>
+		<link rel="stylesheet" type="text/css" href="css/register.css"/>
+		<style type="text/css">
+			.footer{background: #1F1F1F;color: #777;height: 100px;padding-top: 0;margin-top: 40px;position: relative;bottom: 0;}
+			.zhizuo{text-align: center;line-height: 100px;margin-bottom: 0;}
+		</style>
+	</head>
+	<body>
+		<!--头部-->
+		<div class="head">
+			<div class="wrap clear">
+				<div class="login_logo left">
+					<a href="index.html">
+						<img src="img/logo.png"/>
+					</a>
+				</div>
+				<div class="login_right right">
+					<a href="index.html">返回首页</a> | 
+					<a href="#">帮助中心</a>
+				</div>
+			</div>
+		</div>
+		<!--中间注册的表单-->
+		<div class="main">
+			<div class="wrap ">
+				<div class="reg clear">
+				<!--注册表单-->
+					<div class="user_reg left">
+						<form action="" method="post">
+							<div class="formbox">
+								<div class="hang">
+									<label class="tips">
+										<span class="red">*</span>帐户名：
+									</label>
+									<input type="text" name="username" class="username" value="" />
+									<span class="success"></span>
+									<div class="errorname error">用户名可使用字母、汉字、数字、下划线或其组合，4～20个字符，且不能为纯数字</div>
+								</div>
+								<div class="hang">
+									<label class="tips">
+										<span class="red">*</span>设置密码：
+									</label>
+									<input type="password" name="password" class="password" value="" />
+									<span class="success"></span>
+									<div class="errorpwd error">6-20位，支持字母、数字或符号的组合，不可单独使用字母、数字或符号</div>
+								</div>
+								<div class="hang">
+									<label class="tips">
+										<span class="red">*</span>确认密码：
+									</label>
+									<input type="password" name="repassword" class="repassword" value="" />
+									<span class="success"></span>
+									<div class="errorpwd2 error"></div>
+								</div>
+								<div class="hang">
+									<label class="tips">
+										<span class="red">*</span>手机号码：
+									</label>
+									<input type="text" name="phone" class="phone" value="" />
+									<span class="success"></span>
+									<div class="errorphone error"></div>
+								</div>
+								<div class="hang">
+									<label class="tips">
+										<span class="red">*</span>邮箱：
+									</label>
+									<input type="text" name="email" class="email" value="" />
+									<span class="success"></span>
+									<div class="erroremail error"></div>
+								</div>
+								<!--<div class="hang">
+									<label class="tips">
+										<span class="red">*</span>验证码：
+									</label>
+									<input type="text" name="reg-check" class="reg-check" value="" />
+									
+									<span class="success"></span>
+									<div class="erroryzm error"></div>
+								</div>-->
+								<div class="reg_submit">
+									<input type="button" value="注册" class="btn_reg" name="submit"/>
+								</div>
+							</div>
+						</form>
+					</div>
+					<!--注册表单右侧-->
+					<div class="user_reg_right right">
+						<div class="user_ok_register">
+							<span>已注册？</span>
+							<a href="login.html" class="login_a">登录</a>
+						</div>
+						<div class="login_api">
+							<div class="img_login2">
+								<img src="img/vchat.jpg" width="120" height="120"/>
+								<p>微信扫一扫，了解更多</p>
+							</div>
+							<div class="share">
+								<span class="api_tips">使用合作账号登录：</span>
+								<br />
+								<span class="api_form">
+									<a href="#" class="qq"></a>
+									<a href="#" class="sina"></a>
+									<a href="#" class="alipay"></a>
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>	
+		<!--底部内容-->
+		<div class="footer">
+			<div class="wrap zhizuo">
+				制作人：浙江树人大学--计算机科学与技术--143班--肖海杰
+			</div>
+		</div>
+		
+		<script src="js/jquery-1.11.3.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/register.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>
